@@ -56,4 +56,6 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 > **Nota importante**: Antes da configuração em si, é necessário que tenha já desenvolvido um programa para extrair os dados do autómato a partir do Node-RED (ver ficheiros Node-RED)
 
 
+<img width="1079" height="858" alt="image" src="https://github.com/user-attachments/assets/89dc52df-e50a-4239-9509-1fede3b1a9bd" />
+
 
