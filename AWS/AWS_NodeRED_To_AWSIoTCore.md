@@ -14,7 +14,13 @@ Selecione a opção "Things". A "Thing" (ou coisa) é uma representação do dis
 
 > **Nota importante**
 
+
+<img width="1230" height="754" alt="image" src="https://github.com/user-attachments/assets/1bd93f84-6baf-4d17-b910-a5bcb8adf09e" />
+
+
+
 ## 2. 
+
 
 
 
