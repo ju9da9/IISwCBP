@@ -1,8 +1,10 @@
 # Ligação Node-RED <-> AWS IoT Core
 
+(Escrever uma introdução inicial)
+
 ## 1. Configuração da AWS IoT Core
 
-(Escrever uma introdução inicial)
+
 
 No menu Inicial da AWS, pesquise pela opção IoT Core.
 
@@ -52,5 +54,6 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 
 
 > **Nota importante**: Antes da configuração em si, é necessário que tenha já desenvolvido um programa para extrair os dados do autómato a partir do Node-RED (ver ficheiros Node-RED)
+
 
 
