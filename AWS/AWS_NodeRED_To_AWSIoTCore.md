@@ -60,7 +60,7 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 
 
 Adicione um *node* "MQTT out" e entre nas suas configurações. Segundo a imagem seguinte:
- - No *Server*, deverá colocar o endpoint da AWS *Thing"
+ - No *Server*, deverá colocar o *endpoint* da AWS *Thing*
  - O *port* a ser inserido é 8883
  - Ative a opção *Use TLS* e clique no símbolo <img width="35" height="39" alt="image" src="https://github.com/user-attachments/assets/7369f4f2-9647-4ace-ac87-68022b2b2e02" /> para configurar as definições do TLS
 
@@ -69,4 +69,16 @@ Adicione um *node* "MQTT out" e entre nas suas configurações. Segundo a imagem
 Adicione os seguintes certificados nas definições da TLS e clique em *Add*.
 
 <img width="1176" height="454" alt="config-image1" src="https://github.com/user-attachments/assets/02a01ccc-bed2-432d-a64b-77937328cd65" />
+
+No final, escreva o nome do tópico (por exemplo, "AWS/Counters").
+
+<img width="467" height="285" alt="image" src="https://github.com/user-attachments/assets/ded75390-f444-4b26-87cc-ff284d1eab2c" />
+
+O próximo passo passa pela criação de uma função para enviar um *payload* para a AWS IoT Core. Vá na janela lateral do lado esquerdo do Node-RED, pesquise por *function* e arraste o node para o centro da página.
+
+Existem várias formas para processar os dados de maneira a serem enviados para a *Cloud*. Neste caso, como está a ser enviadas várias variáveis, foi utilizado um *node* chamado *join*, no qual junta várias variáveis (não aleatórias) num formato de *array*.
+
+
+<img width="981" height="510" alt="image-config2" src="https://github.com/user-attachments/assets/18cb93fa-3c5c-4a1e-b41f-9afdcdea392d" />
+
 
