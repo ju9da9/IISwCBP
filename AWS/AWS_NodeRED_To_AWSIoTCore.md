@@ -10,27 +10,27 @@ No menu Inicial da AWS, pesquise pela opção IoT Core.
 
 <img width="1715" height="866" alt="image_1" src="https://github.com/user-attachments/assets/20e13d16-5870-4e11-9c1b-277a445b4d5d" />
 
-Selecione a opção "*Things*". A *Thing* (ou coisa) é uma representação do dispositivo físico onde irá ser extraída toda a informação necessária.</p>  
+Selecione a opção *Things*. A *Thing* (ou coisa) é uma representação do dispositivo físico onde irá ser extraída toda a informação necessária.</p>  
 
 <img width="1111" height="742" alt="image" src="https://github.com/user-attachments/assets/20e495a2-8cab-4d70-b14f-c982502e5e32" />
 
-Clique em "*Create Things*" e selecione a opção "*Create single thing*".
+Clique em "*Create Things*" e selecione a opção *Create single thing*.
 
 <img width="1573" height="375" alt="image" src="https://github.com/user-attachments/assets/ef7dcd17-cead-41f2-ac2c-67f1021a8b5b" />
 
 <img width="1812" height="375" alt="image" src="https://github.com/user-attachments/assets/4995268a-b828-423f-9ca4-cf08b1eba90f" />
 
-Escreva o nome do dispositivo na "*Thing name*" e clique em "*Next**"
+Escreva o nome do dispositivo na "Thing name* e clique em *Next*.
 
 <img width="1228" height="748" alt="image" src="https://github.com/user-attachments/assets/55d07ff1-860d-4ca2-ae72-79dba9806748" />
 
-Selecione a opção para auto-gerar um novo certificado e clique em "Next"
+Selecione a opção para auto-gerar um novo certificado e clique em *Next*.
 
 <img width="1268" height="486" alt="image" src="https://github.com/user-attachments/assets/a4441cfb-b9a7-48ae-80db-242acbb03aa1" />
 
 Crie uma nova politica com as ações de publicar, subscrever, conectar e receber em "*Create policy*", no qual irá ser redirecionado para um novo separador.
 
-Insira o nome da *policy* (por exemplo, "SiteWiseTutorialDevicePolicy). Dentro das definições relacionadas com a "*policy documents*", escolha a opção "JSON", insira o seguinte código e substitua os parâmetros "region" e "account-id", pelo nome da região (recomendável que seja Europe (Ireland): eu-west-1) e pelo id da conta (onde pode ser encontrado no canto superior direito, ao lado da região).
+Insira o nome da *policy* (por exemplo, "SiteWiseTutorialDevicePolicy). Dentro das definições relacionadas com a *policy documents*, escolha a opção "JSON", insira o seguinte código e substitua os parâmetros *region* e *account-id*, pelo nome da região (recomendável que seja *Europe (Ireland):* eu-west-1) e pelo id da conta (onde pode ser encontrado no canto superior direito, ao lado da região).
 
 
 <img width="203" height="243" alt="image" src="https://github.com/user-attachments/assets/c173b3f2-6254-4f9c-8e8c-14e7f1c501a0" />
@@ -62,4 +62,11 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 Adicione um *node* "MQTT out" e entre nas suas configurações. Segundo a imagem seguinte:
  - No *Server*, deverá colocar o endpoint da AWS *Thing"
  - O *port* a ser inserido é 8883
- - Ative a opção *Use TLS* e clique no símbolo <img width="35" height="39" alt="image" src="https://github.com/user-attachments/assets/7369f4f2-9647-4ace-ac87-68022b2b2e02" />
+ - Ative a opção *Use TLS* e clique no símbolo <img width="35" height="39" alt="image" src="https://github.com/user-attachments/assets/7369f4f2-9647-4ace-ac87-68022b2b2e02" /> para configurar as definições do TLS
+
+<img width="578" height="466" alt="image" src="https://github.com/user-attachments/assets/8a037293-33e2-430b-b5e2-1583cb5168b6" />
+
+Adicione os seguintes certificados nas definições da TLS e clique em *Add*.
+
+<img width="1176" height="454" alt="config-image1" src="https://github.com/user-attachments/assets/02a01ccc-bed2-432d-a64b-77937328cd65" />
+
