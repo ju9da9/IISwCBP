@@ -6,4 +6,4 @@ Com este serviço é possível monitorizar várias operações nas várias insta
 (Falar como funciona os Assets, os Modelos da AWS IoT SiteWise)
 
 <img width="1181" height="445" alt="image" src="https://github.com/user-attachments/assets/945cc6fe-9676-4ba5-b39b-c2e056ea2529" />
-Imagem retirada de: [O que é o AWS IoT SiteWise? - AWS IoT SiteWise](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/what-is-sitewise.html#how-sitewise-works)
+Imagem retirada de: [O que é o AWS IoT SiteWise? - AWS IoT SiteWise] (https://docs.aws.amazon.com/iot-sitewise/latest/userguide/what-is-sitewise.html#how-sitewise-works)
