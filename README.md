@@ -7,6 +7,7 @@ Este repositório é dedicado ao desenvolvimento da dissertação do mestrado co
 Este contém um conjunto de tutoriais que permitem interligar Programmable Logic Controllers (PLC) às platarormas cloud AWS, Microsoft Azure e Siemens Insights Hub. Em baixo apresenta-se uma estrutura com todas as fases de desenvolvimento
 
 
+## Notas Importantes
 
 
 
