@@ -59,3 +59,7 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 <img width="1079" height="858" alt="image" src="https://github.com/user-attachments/assets/89dc52df-e50a-4239-9509-1fede3b1a9bd" />
 
 
+Adicione um *node* "MQTT out" e entre nas suas configurações. Segundo a imagem seguinte:
+ - No *Server*, deverá colocar o endpoint da AWS *Thing"
+ - O *port* a ser inserido é 8883
+ - Ative a opção *Use TLS* e clique no símbolo <img width="35" height="39" alt="image" src="https://github.com/user-attachments/assets/7369f4f2-9647-4ace-ac87-68022b2b2e02" />
