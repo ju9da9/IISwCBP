@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:example:Machines;1",
+  "@type": "Interface",
+  "displayName": "Machine",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "Level_Tank",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "Valv_Descharge_Tank",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "Valv_Filling_Tank",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "Counter_Part_Machine",
+        "schema": "integer"
+      },
+    {
+      "@type": "Relationship",
+      "name": "containsMachines",
+      "displayName": "contains",
+      "target": "dtmi:example:Machines;1"
+    }      
+  ]
+}

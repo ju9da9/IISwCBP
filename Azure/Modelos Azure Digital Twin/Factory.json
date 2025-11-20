@@ -1,0 +1,19 @@
+{
+  "@id": "dtmi:example:Factory;1",
+  "@type": "Interface",
+  "displayName": "Factory",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "Date",
+        "schema": "integer"
+      },
+    {
+      "@type": "Relationship",
+      "name": "containsProductionLine",
+      "displayName": "contains",
+      "target": "dtmi:example:ProductionLine;1"
+    }
+  ]
+}

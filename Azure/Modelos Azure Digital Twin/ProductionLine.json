@@ -1,0 +1,26 @@
+{
+  "@id": "dtmi:example:ProductionLine;1",
+  "@type": "Interface",
+  "displayName": "Production Line",
+  "contents": [
+    {
+      "@type": "Relationship",
+      "name": "containsMachines",
+      "displayName": "contains",
+      "target": "dtmi:example:Machines;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "containsConveyorTracking",
+      "displayName": "contains",
+      "target": "dtmi:example:ConveyorTracking;1"
+    },
+    {
+      "@type": "Relationship",
+      "name": "containsDistributionSystems",
+      "displayName": "contains",
+      "target": "dtmi:example:DistributionSystems;1"
+    }
+  ],
+  "@context": "dtmi:dtdl:context;2"
+}

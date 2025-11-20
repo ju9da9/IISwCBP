@@ -1,0 +1,44 @@
+{
+  "@id": "dtmi:example:DistributionSystems;1",
+  "@type": "Interface",
+  "displayName": "Distribution System",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "Count_Distro_1",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_2",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_3",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_4",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_5",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_6",
+        "schema": "integer"
+      },
+    {
+        "@type": "Property",
+        "name": "Count_Distro_Total",
+        "schema": "integer"
+      }
+            
+  ]
+}

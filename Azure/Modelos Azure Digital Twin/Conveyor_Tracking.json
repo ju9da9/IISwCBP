@@ -1,0 +1,34 @@
+{
+  "@id": "dtmi:example:ConveyorTracking;1",
+  "@type": "Interface",
+  "displayName": "Conveyor Tracking",
+  "@context": "dtmi:dtdl:context;2",
+  "contents": [
+    {
+        "@type": "Property",
+        "name": "vel_CT3",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "vel_CT4",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "vel_CT5",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "vel_CT6",
+        "schema": "float"
+      },
+    {
+        "@type": "Property",
+        "name": "vel_CT7",
+        "schema": "float"
+      }
+
+  ]
+}
