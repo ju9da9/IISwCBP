@@ -82,3 +82,22 @@ Existem várias formas para processar os dados de maneira a serem enviados para 
 <img width="981" height="510" alt="image-config2" src="https://github.com/user-attachments/assets/18cb93fa-3c5c-4a1e-b41f-9afdcdea392d" />
 
 
+Após fazer *deploy* no Node-RED, este será o resultado final:
+
+<img width="1030" height="115" alt="image" src="https://github.com/user-attachments/assets/a81fdc15-9edf-47af-9c9e-60c4797a24d3" />
+
+
+## 3. Ver o *payload* no MQTT *test client*
+
+Vá na barra lateral da AWS IoT Core e ir em *MQTT test client*.
+
+<img width="228" height="371" alt="iconfig2" src="https://github.com/user-attachments/assets/9ccd47cc-3e3d-4c11-a673-4d48fe0d4bff" />
+
+Em "Topic filter", escreva o nome do tópico que criou no Node-RED e clique em *Subscribe*.
+
+<img width="673" height="432" alt="image" src="https://github.com/user-attachments/assets/d15e3367-75b2-4cd3-9960-d38e25c573c4" />
+
+Irá aparecer uma janela em baixo do *Topic filter* com o conteúdo existente dentro do tópico, com algo semelhante à imagem seguinte:
+
+<img width="605" height="607" alt="image" src="https://github.com/user-attachments/assets/a56f7f98-9dd1-48dc-874f-c0ecf954f5d3" />
+
