@@ -1,0 +1,1481 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": {
+          "type": "grafana",
+          "uid": "-- Grafana --"
+        },
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": 0,
+  "links": [],
+  "panels": [
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 0,
+        "y": 0
+      },
+      "id": 9,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValue",
+          "refId": "A"
+        }
+      ],
+      "title": "Atual Tank Level - Machine 2",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "Level_Tank"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "blue",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 6,
+        "x": 6,
+        "y": 0
+      },
+      "id": 10,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValue",
+          "refId": "A"
+        }
+      ],
+      "title": "Atual Tank Level - Machine 1",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "byVariable": false,
+            "include": {
+              "names": [
+                "Level_Tank"
+              ],
+              "pattern": "Level_TANK"
+            }
+          }
+        }
+      ],
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 4,
+        "w": 12,
+        "x": 12,
+        "y": 0
+      },
+      "id": 8,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "area",
+        "justifyMode": "auto",
+        "orientation": "auto",
+        "percentChangeColorMode": "standard",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showPercentChange": false,
+        "textMode": "auto",
+        "wideLayout": true
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "157271fa-a24c-40ce-bac0-015f416fb02c"
+          ],
+          "queryType": "PropertyValue",
+          "refId": "A"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "157271fa-a24c-40ce-bac0-015f416fb02c"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1"
+        }
+      ],
+      "title": "Production",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "Level_Tank",
+                  "Valv_Descharge_Tank"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 0,
+        "y": 4
+      },
+      "id": 1,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "aggregates": [
+            "AVERAGE"
+          ],
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValueHistory",
+          "refId": "A",
+          "resolution": "AUTO",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "d4338b16-c4c4-47e4-be27-43102dff3f59"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "default",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ee170761-d85a-4af6-a66b-bb186385bfda"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "C",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        }
+      ],
+      "title": "Tank levels - Machine 1",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            }
+          },
+          "mappings": []
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "80+"
+            },
+            "properties": [
+              {
+                "id": "color",
+                "value": {
+                  "fixedColor": "#F2495C",
+                  "mode": "fixed"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 10,
+        "w": 12,
+        "x": 12,
+        "y": 4
+      },
+      "id": 3,
+      "options": {
+        "displayLabels": [
+          "value"
+        ],
+        "legend": {
+          "displayMode": "list",
+          "placement": "right",
+          "showLegend": true,
+          "values": []
+        },
+        "pieType": "pie",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "sort": "none",
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "multi",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ec2b0e99-c2a9-492d-90d0-1ebcbe278efc"
+          ],
+          "queryType": "PropertyValue",
+          "refId": "A",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "8f72a5a6-9d97-41a7-915f-4427621b0ad6"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "a8e23f1e-ae6a-48b7-bba1-b9f23416c8e6"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "C",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "e5941490-1022-47fc-a9ba-204c99ab0f19"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "D",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "10a77760-be35-4f83-b0ad-264d8866beac"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "E",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "10a77760-be35-4f83-b0ad-264d8866beac"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "G",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "17c60542-54b3-469f-962c-58c8121a2647"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ca3f3f83-8685-42d6-ad41-a6930c5c21d4"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "F",
+          "region": "eu-west-1"
+        }
+      ],
+      "title": "Distribuition System Outputs",
+      "transparent": true,
+      "type": "piechart"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "description": "",
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "fieldMinMax": true,
+          "mappings": [],
+          "max": 15,
+          "min": 0,
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "#EAB839",
+                "value": 8
+              },
+              {
+                "color": "red",
+                "value": 12
+              }
+            ]
+          }
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 14,
+        "w": 12,
+        "x": 12,
+        "y": 14
+      },
+      "id": 4,
+      "options": {
+        "minVizHeight": 75,
+        "minVizWidth": 75,
+        "orientation": "auto",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        },
+        "showThresholdLabels": false,
+        "showThresholdMarkers": true,
+        "sizing": "auto"
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "aggregates": [
+            "AVERAGE"
+          ],
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "04aadb85-a998-46ca-85e7-a2ac6172dea6"
+          ],
+          "queryType": "PropertyValue",
+          "refId": "A",
+          "resolution": "AUTO",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "459d7883-b3aa-422c-a9ce-4229c03b0c5b"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "459d7883-b3aa-422c-a9ce-4229c03b0c5b"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "C",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ccd24284-0614-4881-a2ee-41f93d956e01"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "D",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "2db8be21-3aad-4d96-8892-2091020660b7"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "E",
+          "region": "eu-west-1"
+        },
+        {
+          "assetIds": [
+            "f0dad411-7587-4286-ba70-cdba54476a68"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "fc3198bc-44d5-4bf2-b2e3-98348647e599"
+          ],
+          "queryType": "PropertyValue",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "F",
+          "region": "eu-west-1"
+        }
+      ],
+      "title": "Conveyor Tracking Velocities",
+      "transparent": true,
+      "type": "gauge"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "palette-classic"
+          },
+          "custom": {
+            "axisBorderShow": false,
+            "axisCenteredZero": false,
+            "axisColorMode": "text",
+            "axisLabel": "",
+            "axisPlacement": "auto",
+            "barAlignment": 0,
+            "barWidthFactor": 0.6,
+            "drawStyle": "line",
+            "fillOpacity": 0,
+            "gradientMode": "none",
+            "hideFrom": {
+              "legend": false,
+              "tooltip": false,
+              "viz": false
+            },
+            "insertNulls": false,
+            "lineInterpolation": "linear",
+            "lineWidth": 1,
+            "pointSize": 5,
+            "scaleDistribution": {
+              "type": "linear"
+            },
+            "showPoints": "auto",
+            "showValues": false,
+            "spanNulls": false,
+            "stacking": {
+              "group": "A",
+              "mode": "none"
+            },
+            "thresholdsStyle": {
+              "mode": "off"
+            }
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "__systemRef": "hideSeriesFrom",
+            "matcher": {
+              "id": "byNames",
+              "options": {
+                "mode": "exclude",
+                "names": [
+                  "Level_Tank"
+                ],
+                "prefix": "All except:",
+                "readOnly": true
+              }
+            },
+            "properties": [
+              {
+                "id": "custom.hideFrom",
+                "value": {
+                  "legend": false,
+                  "tooltip": true,
+                  "viz": true
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 12,
+        "w": 12,
+        "x": 0,
+        "y": 16
+      },
+      "id": 2,
+      "options": {
+        "legend": {
+          "calcs": [],
+          "displayMode": "list",
+          "placement": "bottom",
+          "showLegend": true
+        },
+        "tooltip": {
+          "hideZeros": false,
+          "mode": "single",
+          "sort": "none"
+        }
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValueHistory",
+          "refId": "A",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "d4338b16-c4c4-47e4-be27-43102dff3f59"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ee170761-d85a-4af6-a66b-bb186385bfda"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "C",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        }
+      ],
+      "title": "Tank levels - Machine 2",
+      "transparent": true,
+      "type": "timeseries"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "decimals": 4,
+          "fieldMinMax": true,
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 151
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Level_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 137
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Valv_Descharge_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 137
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Valv_Filling_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 170
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Machine_1 Level_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 172
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Machine_2 Level_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 200
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 7,
+        "x": 0,
+        "y": 28
+      },
+      "id": 5,
+      "options": {
+        "cellHeight": "sm",
+        "enablePagination": false,
+        "frameIndex": 0,
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "time"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValueHistory",
+          "refId": "A",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ff90c7a6-0b3b-4986-ade5-6b733a4587b3"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        }
+      ],
+      "title": "Level Tank Timestamps",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time",
+                "Machine_1 Level_Tank",
+                "Machine_2 Level_Tank"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Machine_1 Valv_Filling_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 206
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 152
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 8,
+        "x": 7,
+        "y": 28
+      },
+      "id": 7,
+      "options": {
+        "cellHeight": "sm",
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "time"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ee170761-d85a-4af6-a66b-bb186385bfda"
+          ],
+          "queryType": "PropertyValueHistory",
+          "refId": "A",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "ee170761-d85a-4af6-a66b-bb186385bfda"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        }
+      ],
+      "title": "Valv_Filling_Tank Timestamps",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time",
+                "Machine_1 Valv_Filling_Tank",
+                "Machine_2 Valv_Filling_Tank"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "table"
+    },
+    {
+      "datasource": {
+        "type": "grafana-iot-sitewise-datasource",
+        "uid": "eezlgiihrvlz4a"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "color": {
+            "mode": "thresholds"
+          },
+          "custom": {
+            "align": "auto",
+            "cellOptions": {
+              "type": "auto"
+            },
+            "footer": {
+              "reducers": []
+            },
+            "inspect": false
+          },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              {
+                "color": "green",
+                "value": 0
+              },
+              {
+                "color": "red",
+                "value": 80
+              }
+            ]
+          }
+        },
+        "overrides": [
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "time"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 151
+              }
+            ]
+          },
+          {
+            "matcher": {
+              "id": "byName",
+              "options": "Machine_2 Valv_Descharge_Tank"
+            },
+            "properties": [
+              {
+                "id": "custom.width",
+                "value": 248
+              }
+            ]
+          }
+        ]
+      },
+      "gridPos": {
+        "h": 16,
+        "w": 9,
+        "x": 15,
+        "y": 28
+      },
+      "id": 6,
+      "options": {
+        "cellHeight": "sm",
+        "frameIndex": 1,
+        "showHeader": true,
+        "sortBy": [
+          {
+            "desc": true,
+            "displayName": "time"
+          }
+        ]
+      },
+      "pluginVersion": "12.3.0-18686767985.patch2",
+      "targets": [
+        {
+          "assetIds": [
+            "b4d42a18-af6d-461e-b016-f02efa7d93fb"
+          ],
+          "clientCache": true,
+          "flattenL4e": true,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "d4338b16-c4c4-47e4-be27-43102dff3f59"
+          ],
+          "queryType": "PropertyValueHistory",
+          "refId": "A",
+          "timeOrdering": "ASCENDING"
+        },
+        {
+          "assetIds": [
+            "fc11cea2-4c3f-4c89-a0e8-8046751a4af4"
+          ],
+          "clientCache": true,
+          "datasource": {
+            "type": "grafana-iot-sitewise-datasource",
+            "uid": "eezlgiihrvlz4a"
+          },
+          "flattenL4e": true,
+          "hide": false,
+          "maxPageAggregations": 1,
+          "propertyIds": [
+            "d4338b16-c4c4-47e4-be27-43102dff3f59"
+          ],
+          "queryType": "PropertyValueHistory",
+          "rawSQL": "select $__selectAll from raw_time_series where $__timeFilter(event_timestamp)",
+          "refId": "B",
+          "region": "eu-west-1",
+          "timeOrdering": "ASCENDING"
+        }
+      ],
+      "title": "Valv_Descharge_Tank Timestamps",
+      "transformations": [
+        {
+          "id": "filterFieldsByName",
+          "options": {
+            "include": {
+              "names": [
+                "time",
+                "Machine_1 Valv_Descharge_Tank",
+                "Machine_2 Valv_Descharge_Tank"
+              ]
+            }
+          }
+        }
+      ],
+      "type": "table"
+    }
+  ],
+  "preload": false,
+  "refresh": "5s",
+  "schemaVersion": 42,
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-5m",
+    "to": "now"
+  },
+  "timepicker": {},
+  "timezone": "browser",
+  "title": "Factory_Dissert_Dashboard",
+  "uid": "fe5qrwh",
+  "version": 55
+}
