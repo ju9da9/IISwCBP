@@ -11,11 +11,41 @@ Imagem retirada de: [O que é o AWS IoT SiteWise? - AWS IoT SiteWise](https://do
 
 
 
-| Nome da propriedade  | Property alias | Tipo    |
-| ------------- | ------------- | ------------- | 
-| Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell | Content Cell | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | 
-| Content Cell  | Content Cell  | Content Cell  | 
-| ------------- | ------------- | ------------- |
+| Property Name (SiteWise) | Property Alias                                      | Tipo    |
+|--------------------------|----------------------------------------------------|---------|
+| Count_Distro_1           | /Factory_1/Distribution_System_1/Count_Distro_1    | integer |
+| Count_Distro_2           | /Factory_1/Distribution_System_1/Count_Distro_2    | integer |
+| Count_Distro_3           | /Factory_1/Distribution_System_1/Count_Distro_3    | integer |
+| Count_Distro_4           | /Factory_1/Distribution_System_1/Count_Distro_4    | integer |
+| Count_Distro_5           | /Factory_1/Distribution_System_1/Count_Distro_5    | integer |
+| Count_Distro_6           | /Factory_1/Distribution_System_1/Count_Distro_6    | integer |
+| Count_Distro_Total       | /Factory_1/Distribution_System_1/Count_Distro_Total| integer |
+
+
+
+
+| Property Name (SiteWise)     | Property Alias                                | Tipo    |
+|------------------------------|-----------------------------------------------|---------|
+| No_Distro_Active             | /Factory_1/No_Distro_Active                  | boolean |
+| No_Machine_Active            | /Factory_1/No_Machine_Active                 | boolean |
+| No_Conditions_toStack        | /Factory_1/No_Conditions_toStack             | boolean |
+
+
+
+| Property Name (SiteWise)     | Property Alias                                   | Tipo    |
+|------------------------------|-------------------------------------------------|---------|
+| Level_Tank                  | /Factory_1/Machine_1/Level_Tank                 | double  |
+| Valv_Discharge              | /Factory_1/Machine_1/Valv_Discharge             | boolean |
+| Valv_Filling                | /Factory_1/Machine_1/Valv_Filling               | boolean |
+| Counter_Part_Machine        | /Factory_1/Machine_1/Counter_Part_Machine       | integer |
+
+> *Esta tabela aplica-se para `Machine_2`*
+
+
+| Property Name (SiteWise) | Property Alias                                   | Tipo   |
+|--------------------------|-------------------------------------------------|--------|
+| vel_CT3                 | /Factory_1/Conveyor_Tracking_1/vel_CT3          | double |
+| vel_CT4                 | /Factory_1/Conveyor_Tracking_1/vel_CT4          | double |
+| vel_CT5                 | /Factory_1/Conveyor_Tracking_1/vel_CT5          | double |
+| vel_CT6                 | /Factory_1/Conveyor_Tracking_1/vel_CT6          | double |
+| vel_CT7                 | /Factory_1/Conveyor_Tracking_1/vel_CT7          | double |
