@@ -35,8 +35,8 @@ Imagem retirada de: [O que é o AWS IoT SiteWise? - AWS IoT SiteWise](https://do
 | Property Name (SiteWise)     | Property Alias                                   | Tipo    |
 |------------------------------|-------------------------------------------------|---------|
 | Level_Tank                  | /Factory_1/Machine_1/Level_Tank                 | double  |
-| Valv_Discharge              | /Factory_1/Machine_1/Valv_Discharge             | boolean |
-| Valv_Filling                | /Factory_1/Machine_1/Valv_Filling               | boolean |
+| Valv_Discharge              | /Factory_1/Machine_1/Valv_Discharge             | double |
+| Valv_Filling                | /Factory_1/Machine_1/Valv_Filling               | double |
 | Counter_Part_Machine        | /Factory_1/Machine_1/Counter_Part_Machine       | integer |
 
 > *Esta tabela aplica-se para `Machine_2`*
