@@ -46,7 +46,7 @@ Para poder aceder aos dados da AWS IoT SiteWise, é necessário ter uma chave de
   2. Obter o histórico dos valores das propriedades.
   3. Poder obter a estampa de tempo (*timestamp*) para as propriedades dos assets.
 
-Para poder fazer isso, Volte à AWS e pesquise por IAM. Quando chegar à página, vá a *Users* e crie um novo *user.
+Para poder fazer isso, Volte à AWS e pesquise por IAM. Quando chegar à página, vá a *Users* e crie um novo *user*.
 
 <img width="1584" height="274" alt="image" src="https://github.com/user-attachments/assets/9bdd2999-a1c9-4b88-aae0-1b7a12aca63a" />
 
