@@ -60,7 +60,7 @@ Seleccione na opção *Attatch policies directly*, e crie uma nova policy em *Cr
 
 Insira as seguintes ações conforme se encontra na imagem seguinte
 
-'''
+```
 {
     "Version": "2012-10-17",
     "Statement": [
@@ -78,7 +78,7 @@ Insira as seguintes ações conforme se encontra na imagem seguinte
     ]
 }
 
-'''
+```
 
 <img width="579" height="286" alt="image" src="https://github.com/user-attachments/assets/f3ede255-cad9-442c-b189-f62762344ae7" />
 
