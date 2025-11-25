@@ -58,7 +58,7 @@ Seleccione na opção *Attatch policies directly*, e crie uma nova policy em *Cr
 
 <img width="1477" height="298" alt="image" src="https://github.com/user-attachments/assets/1fba5800-9232-42e5-96c0-e909252a091e" />
 
-Insira as seguintes ações conforme se encontra na imagem seguinte
+Insira as seguintes ações conforme se encontra nno comando seguinte:
 
 ```
 {
@@ -80,6 +80,10 @@ Insira as seguintes ações conforme se encontra na imagem seguinte
 
 ```
 
+Salve a *policy* criada.
+
+Volte à página da criação do *IAM User* (na parte das *policies*), Selecione a policy criada e clique em *Next*.
+<img width="1494" height="458" alt="image" src="https://github.com/user-attachments/assets/b81c9ef6-3ed0-41a0-9050-40c02f26bd5f" />
 
 
 
