@@ -80,7 +80,7 @@ Insira as seguintes ações conforme se encontra na imagem seguinte
 
 ```
 
-<img width="579" height="286" alt="image" src="https://github.com/user-attachments/assets/f3ede255-cad9-442c-b189-f62762344ae7" />
+
 
 
 
