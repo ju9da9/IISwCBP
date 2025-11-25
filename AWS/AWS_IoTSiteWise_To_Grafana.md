@@ -201,7 +201,7 @@ fghjkljhgfhjk
 <img width="1095" height="679" alt="image" src="https://github.com/user-attachments/assets/135923e7-84d9-4354-9ca1-6eb4d96355a6" />
 
 
-Existem inúmeros tipos de visualização no grafana para poder criar uma dashboard. O template do caso utilizado está na pasta [Backup Dashboard grafana AWS]().
+Existem inúmeros tipos de visualização no grafana para poder criar uma dashboard. O template do caso utilizado está na pasta [Backup Dashboard grafana AWS](AWS/Backup-Dashboard-grafana-AWS).
 
 
 
