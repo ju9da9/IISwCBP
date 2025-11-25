@@ -9,7 +9,7 @@ Com este serviço é possível monitorizar várias operações nas várias insta
 Imagem retirada de: [O que é o AWS IoT SiteWise? - AWS IoT SiteWise](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/what-is-sitewise.html#how-sitewise-works) .
 
 
-### 1. Criação de Modelos e Assets
+## 1. Criação de Modelos e Assets
 
 O primeiro passo passa por criar os modelos para os Assets. 
 
@@ -110,7 +110,7 @@ Clique em "Save".
 <img width="284" height="356" alt="image" src="https://github.com/user-attachments/assets/6467d983-2129-44d0-af88-0d2f59eac470" />
 
 
-### 2. Criação de Rules
+## 2. Criação de Rules
 
 O próximo passo passa pela criação de Rules (Regras), que permitem o envio dos dados vindos dos tópicos que entraram no AWS IoT Core para o Serviço pretendido ( neste caso a AWS SiteWise).
 
