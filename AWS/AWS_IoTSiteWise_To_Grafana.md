@@ -170,23 +170,38 @@ Se quiser adicionar alertas, é necessário usar transformações com as data so
 
 Para tal , salve as suas alterações da dashboard e no canto inferior esquerdo do painel de visualização  clique em "transformations" (ver seguinte site: [Query and transform data | Grafana documentation]( https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/)
 
+<img width="389" height="99" alt="image" src="https://github.com/user-attachments/assets/51b45023-11ef-4b1e-b761-4f9bd182a91f" />
 
 
 
+Clique em "Add transformation".
 
 
+<img width="719" height="173" alt="image" src="https://github.com/user-attachments/assets/89494420-400c-4a26-9162-6840a2eab0e0" />
 
 
+Irá aparecer uma janela para selecionar o tipo de transformação. Selecione o tipo de transformação " Filter fields by name”.
 
 
+<img width="163" height="192" alt="image" src="https://github.com/user-attachments/assets/061f461c-22af-40b7-bf2a-46689fe364c8" />
 
 
+Existe uma zona de seleção onde aparecem as propriedades da query. Marca apenas a propriedade que interessa para o alerta ( Neste caso é a "Level_Tank"). Isto eliminará todas as outras colunas que aparecem na query, deixando apenas a série da variável que se pretende monitorizar.
 
 
+<img width="524" height="145" alt="image" src="https://github.com/user-attachments/assets/628931b3-ea72-41d1-96d2-8d5d26802a2f" />
+
+Salva a alteração, vá no painel onde fez a transformação e clique no botão esquerdo do rato ou em <img width="46" height="46" alt="image" src="https://github.com/user-attachments/assets/17830924-df5c-4352-8034-9f489e473173" />, clique em "more" e de seguida clique em "New alert rule".
+
+<img width="665" height="347" alt="image" src="https://github.com/user-attachments/assets/98c2fd7c-7f5b-4318-8382-88324a8609c7" />
+
+fghjkljhgfhjk
 
 
+<img width="1095" height="679" alt="image" src="https://github.com/user-attachments/assets/135923e7-84d9-4354-9ca1-6eb4d96355a6" />
 
 
+Existem inúmeros tipos de visualização no grafana para poder criar uma dashboard. O template do caso utilizado está na pasta [Backup Dashboard grafana AWS]().
 
 
 
