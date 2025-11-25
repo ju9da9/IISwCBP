@@ -54,12 +54,31 @@ Insira um *User name* e clique em *Next*.
 
 <img width="1502" height="457" alt="image" src="https://github.com/user-attachments/assets/1e0aa7ee-9b41-431d-8c2a-63e1f3b11f66" />
 
-Seleccione na opção *Attatch policies directly*, e crie uma nova policy em *Create policy*
-
+Seleccione na opção *Attatch policies directly*, e crie uma nova policy em *Create policy*. Insira um nome (por exemplo, "GrafanaSiteWiseReadOnly").
 
 <img width="1477" height="298" alt="image" src="https://github.com/user-attachments/assets/1fba5800-9232-42e5-96c0-e909252a091e" />
 
-Insira as seguintes ações conforme
+Insira as seguintes ações conforme se encontra na imagem seguinte
+
+'''
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iotsitewise:Describe*",
+                "iotsitewise:Get*",
+                "iotsitewise:List*",
+                "iotsitewise:BatchGetAssetPropertyValue",
+                "iotsitewise:BatchGetAssetPropertyValueHistory"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+'''
 
 <img width="579" height="286" alt="image" src="https://github.com/user-attachments/assets/f3ede255-cad9-442c-b189-f62762344ae7" />
 
