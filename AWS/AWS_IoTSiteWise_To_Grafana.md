@@ -168,7 +168,7 @@ Se quiser adicionar alertas, é necessário usar transformações com as data so
 
 
 
-Para tal , salve as suas alterações da dashboard e no canto inferior esquerdo do painel de visualização  clique em "transformations" (ver seguinte site: [Query and transform data | Grafana documentation] https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/
+Para tal , salve as suas alterações da dashboard e no canto inferior esquerdo do painel de visualização  clique em "transformations" (ver seguinte site: [Query and transform data | Grafana documentation]( https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/)
 
 
 
