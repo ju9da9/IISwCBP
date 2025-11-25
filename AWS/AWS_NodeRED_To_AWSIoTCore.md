@@ -33,7 +33,24 @@ Crie uma nova politica com as ações de publicar, subscrever, conectar e recebe
 Insira o nome da *policy* (por exemplo, "SiteWiseTutorialDevicePolicy). Dentro das definições relacionadas com a *policy documents*, escolha a opção "JSON", insira o seguinte código e substitua os parâmetros *region* e *account-id*, pelo nome da região (recomendável que seja *Europe (Ireland):* eu-west-1) e pelo id da conta (onde pode ser encontrado no canto superior direito, ao lado da região).
 
 
-<img width="203" height="243" alt="image" src="https://github.com/user-attachments/assets/c173b3f2-6254-4f9c-8e8c-14e7f1c501a0" />
+```
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "iot:Connect",
+        "iot:Publish",
+        "iot:Subscribe",
+        "iot:Receive"
+      ],
+      "Resource": "*"
+    }
+  ]
+}
+
+```
 
 Faça o download de todos os certificados assim que for criada a *Thing*.
 
@@ -100,4 +117,5 @@ Em "Topic filter", escreva o nome do tópico que criou no Node-RED e clique em *
 Irá aparecer uma janela em baixo do *Topic filter* com o conteúdo existente dentro do tópico, com algo semelhante à imagem seguinte:
 
 <img width="605" height="607" alt="image" src="https://github.com/user-attachments/assets/a56f7f98-9dd1-48dc-874f-c0ecf954f5d3" />
+
 
