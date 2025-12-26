@@ -1,15 +1,11 @@
 
 
 ```
-
 ┌─────────────────────────────┐
 │  Node.js                    │
 │  Node-RED  (porta 1880)     │
 │  Mosquitto (porta 1883)     │
 └─────────────────────────────┘
-
-
-
 ```
 
 1️⃣ Preparar diretórios no HOST (IOT2050)
@@ -28,7 +24,6 @@ Permissões (MUITO IMPORTANTE):
 ```
 chown -R 1000:1000 /data/iot-stack
 chmod -R 755 /data/iot-stack
-
 ```
 
 
@@ -49,8 +44,6 @@ log_dest stdout
 
 listener 1883
 allow_anonymous true
-
-
 ```
 (Sem autenticação por enquanto — depois podemos endurecer)
 
@@ -62,8 +55,6 @@ Crie uma pasta de build:
 ```
 mkdir ~/iot-docker
 cd ~/iot-docker
-
-
 ```
 Crie o Dockerfile:
 
@@ -115,7 +106,6 @@ EXPOSE 1880 1883
 USER node
 
 ENTRYPOINT ["/entrypoint.sh"]
-
 ```
 
 4️⃣ Criar o entrypoint (inicia Mosquitto + Node-RED)
@@ -123,7 +113,6 @@ ENTRYPOINT ["/entrypoint.sh"]
 
 ```
 nano entrypoint.sh
-
 ```
 Com o seguinte conteúdo:
 
@@ -135,7 +124,6 @@ mosquitto -c /mosquitto/config/mosquitto.conf &
 
 # Iniciar Node-RED
 node-red --userDir /data
-
 ```
 
 5️⃣ Build da imagem Docker
@@ -163,7 +151,6 @@ docker run -d \
   -v /data/iot-stack/mosquitto/data:/mosquitto/data \
   -v /data/iot-stack/mosquitto/log:/mosquitto/log \
   iot-nodered-mqtt
-
 ``` 
 
 7️⃣ Verificar se está tudo a correr
@@ -199,8 +186,8 @@ No browser:
 
 ```
 http://IP_DO_IOT2050:1880
-
 ```
+
 
 
 
