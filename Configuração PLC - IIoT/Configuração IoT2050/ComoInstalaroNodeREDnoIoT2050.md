@@ -188,7 +188,17 @@ No browser:
 http://IP_DO_IOT2050:1880
 ```
 
+Comandos a serem usados
 
+| Ação                | Comando                               |
+| ------------------- | ------------------------------------- |
+| Iniciar             | `docker start iot-stack`              |
+| Parar               | `docker stop iot-stack`               |
+| Reiniciar           | `docker restart iot-stack`            |
+| Logs                | `docker logs -f iot-stack`            |
+| Entrar no container | `docker exec -it iot-stack /bin/bash` |
+| Criar com volumes   | `docker run -d -v ...`                |
+| Atualizar imagem    | `docker build --no-cache`             |
 
 
 
