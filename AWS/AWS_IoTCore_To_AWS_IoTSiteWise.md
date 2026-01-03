@@ -143,6 +143,8 @@ No passo seguinte, é necessário associar os dados selecionados na regra ao pro
 
 
 (Falta falar da IAM Role no fim)
+No final de  adicionar todas as variáveis que estão inseridas no tópico, deve ser adicionada uma IAM Role. ( Escrever a seguir o que é) uma IAM Role é uma regra
+
 ``` 
 {
 	"Version": "2012-10-17",
