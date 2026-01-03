@@ -190,5 +190,5 @@ E assim temos a IAM role criada.
 <img width="1597" height="882" alt="image" src="https://github.com/user-attachments/assets/8f9695a1-f0d9-4374-8292-24f89ce2cbd7" />
 
 
-Volte de novo à página onde estava a criar a rule. Use o ícone <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> para atualizar a lista de roles e volte a inserir a role criada. De seguida Clique em "Next" e depois em "Create". Faça o mesmo com os restantes tópicos e assim poderá redirecionar os dados que estão na AWS IoT Core na AWS IoT SiteWise.
+Volte de novo à página onde estava a criar a rule. Use o ícone <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> para atualizar a lista de roles e volte a inserir a role criada. De seguida Clique em "Next" e depois em "Create". Faça o mesmo com os restantes tópicos e assim poderá redirecionar os dados que estão na AWS IoT Core para a AWS IoT SiteWise.
 
