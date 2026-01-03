@@ -142,8 +142,8 @@ No passo seguinte, é necessário associar os dados selecionados na regra ao pro
 <img width="1282" height="826" alt="image" src="https://github.com/user-attachments/assets/563bcfcf-6317-4535-a1ae-c7efb6293387" />
 
 
-(Falta falar da IAM Role no fim)
-No final de  adicionar todas as variáveis que estão inseridas no tópico, deve ser adicionada uma IAM Role. ( Escrever a seguir o que é) uma IAM Role é uma regra... Neste caso, é preciso uma IAM role para permitir que sejam escritos os dados na propriedades dos assets na IoT SiteWise.
+__(Falta falar da IAM Role no fim)__
+__No final de  adicionar todas as variáveis que estão inseridas no tópico, deve ser adicionada uma IAM Role com uma *policy* acossiada. ( Escrever a seguir o que é) uma IAM Role é uma regra... Uma policy é..... Neste caso, é preciso uma IAM role para permitir que sejam escritos os dados na propriedades dos assets na IoT SiteWise.__
 
 Como é muito provável que não terá uma uma IAM Role criada para esta funcionalidade, vá até ao fundo da páginam donde terá um separador chamado *IAM Role*, e clique em  *Create an new role*, onde deverá inserir um novo nome para a role e clicar em *Create*.
 <img width="526" height="226" alt="image" src="https://github.com/user-attachments/assets/40442779-c9f2-4223-8083-ccef1fcb16ac" />
@@ -177,6 +177,14 @@ Se quiser fazer em formato JSON poderá usar a seguinte declaração:
 	]
 }
 ```
+
+Clique em Next.
+
+<img width="1627" height="513" alt="image" src="https://github.com/user-attachments/assets/8c9f1a9e-07c4-4850-a503-4fe711d744ca" />
+
+Insira uma nome para a policy e clique em *Create policy*.
+
+<img width="1638" height="502" alt="image" src="https://github.com/user-attachments/assets/22b726ee-0921-4baa-acea-7d2a8abd5dfd" />
 
 
 
