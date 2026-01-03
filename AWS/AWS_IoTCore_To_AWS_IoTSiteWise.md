@@ -143,7 +143,27 @@ No passo seguinte, é necessário associar os dados selecionados na regra ao pro
 
 
 (Falta falar da IAM Role no fim)
-No final de  adicionar todas as variáveis que estão inseridas no tópico, deve ser adicionada uma IAM Role. ( Escrever a seguir o que é) uma IAM Role é uma regra
+No final de  adicionar todas as variáveis que estão inseridas no tópico, deve ser adicionada uma IAM Role. ( Escrever a seguir o que é) uma IAM Role é uma regra... Neste caso, é preciso uma IAM role para permitir que sejam escritos os dados na propriedades dos assets na IoT SiteWise.
+
+Como é muito provável que não terá uma uma IAM Role criada para esta funcionalidade, vá até ao fundo da páginam donde terá um separador chamado *IAM Role*, e clique em  *Create an new role*, onde deverá inserir um novo nome para a role e clicar em *Create*.
+<img width="526" height="226" alt="image" src="https://github.com/user-attachments/assets/40442779-c9f2-4223-8083-ccef1fcb16ac" />
+
+Para que haja permissão para que os dados sejam redirecionados para a  IoT SiteWise, deve ser editada a role recentemente criada. Cique em "view", onde será redirecionado para uma nova página.
+
+<img width="576" height="82" alt="image" src="https://github.com/user-attachments/assets/3c792c9d-8349-4f87-a55e-a1aea1156aa2" />
+
+Na página que foi aberta, vá a *Permissions policies*, e em "Add permissions", escolha a opção *Create inline policy*.
+
+<img width="1472" height="284" alt="image" src="https://github.com/user-attachments/assets/1f5ecd36-4057-4e63-a489-0e3580b057ca" />
+
+Você será redirecionado para uma página para especificar permissões, onde tem duas maneiras para adicioná-las: Ou através de uma declaração JSON ou por método visual, onde escolherá os níveis de acesso (List, Read, Write, Tagging) e recursos ARN (__*All*__ OR __*Specific*__). Neste caso, só é necessário a ação __"BatchPutAssetPropertyValue"__ , onde "Grants permission to put property values for asset properties". Nestes casos normalmente os recursos não são específicos, entãom em *Resources*, selecione a opção "All".
+
+
+<img width="987" height="746" alt="image" src="https://github.com/user-attachments/assets/aa972b01-9606-4075-8f97-ff6a20f6c3c6" />
+
+
+
+Se quiser fazer em formato JSON poderá usar a seguinte declaração:
 
 ``` 
 {
@@ -158,7 +178,8 @@ No final de  adicionar todas as variáveis que estão inseridas no tópico, deve
 }
 ```
 
-<img width="576" height="82" alt="image" src="https://github.com/user-attachments/assets/3c792c9d-8349-4f87-a55e-a1aea1156aa2" />
+
+
 
 <img width="1597" height="882" alt="image" src="https://github.com/user-attachments/assets/8f9695a1-f0d9-4374-8292-24f89ce2cbd7" />
 
