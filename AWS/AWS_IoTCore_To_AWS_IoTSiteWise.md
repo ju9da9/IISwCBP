@@ -143,7 +143,7 @@ No passo seguinte, é necessário associar os dados selecionados na regra ao pro
 
 
 (Falta falar da IAM Role no fim)
-''' 
+``` 
 {
 	"Version": "2012-10-17",
 	"Statement": [
@@ -154,7 +154,7 @@ No passo seguinte, é necessário associar os dados selecionados na regra ao pro
 		}
 	]
 }
-'''
+```
 
 <img width="576" height="82" alt="image" src="https://github.com/user-attachments/assets/3c792c9d-8349-4f87-a55e-a1aea1156aa2" />
 
