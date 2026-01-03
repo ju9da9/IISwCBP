@@ -180,16 +180,15 @@ Se quiser fazer em formato JSON poderá usar a seguinte declaração:
 
 Clique em Next.
 
-<img width="1627" height="513" alt="image" src="https://github.com/user-attachments/assets/8c9f1a9e-07c4-4850-a503-4fe711d744ca" />
-
 Insira uma nome para a policy e clique em *Create policy*.
 
 <img width="1638" height="502" alt="image" src="https://github.com/user-attachments/assets/22b726ee-0921-4baa-acea-7d2a8abd5dfd" />
 
-
+E assim temos a IAM role criada.
 
 
 <img width="1597" height="882" alt="image" src="https://github.com/user-attachments/assets/8f9695a1-f0d9-4374-8292-24f89ce2cbd7" />
 
 
+Volte de novo à página onde estava a criar a rule. Use o ícone <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> para atualizar a lista de roles e volte a inserir a role criada. De seguida Clique em "Next" e depois em "Create". Faça o mesmo com os restantes tópicos e assim poderá redirecionar os dados que estão na AWS IoT Core na AWS IoT SiteWise.
 
