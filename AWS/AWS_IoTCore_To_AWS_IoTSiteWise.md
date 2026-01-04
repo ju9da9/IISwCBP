@@ -17,7 +17,7 @@ O primeiro passo passa por criar os modelos para os Assets.
 
 <img width="1359" height="744" alt="image" src="https://github.com/user-attachments/assets/62277c0d-3341-4227-9c8d-24467c781ef6" />
 
-> NOTA IMPORTANTE: *Esta tabela aplica-se para `Machine_2`*
+> NOTA IMPORTANTE: Caso queira criar notificações e alertas com o grafana, __Não use 'Units'__, uma vez que impossibilita que isto seja possível.
 
 No caso criado, estas foram as tabelas utilizadas para criar os Modelos:
 
