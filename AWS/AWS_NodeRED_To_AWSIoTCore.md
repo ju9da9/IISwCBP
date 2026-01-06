@@ -78,7 +78,7 @@ Deve ser guardada também o nosso *domain name* (ou *endpoint*), uma vez que vai
 
 Adicione um *node* "MQTT out" e entre nas suas configurações. Segundo a imagem seguinte:
  - No *Server*, deverá colocar o *endpoint* da AWS *Thing*
- - O *port* a ser inserido é 8883
+ - O *port* a ser inserido é __8883__ (não 1883)
  - Ative a opção *Use TLS* e clique no símbolo <img width="35" height="39" alt="image" src="https://github.com/user-attachments/assets/7369f4f2-9647-4ace-ac87-68022b2b2e02" /> para configurar as definições do TLS
 
 <img width="578" height="466" alt="image" src="https://github.com/user-attachments/assets/8a037293-33e2-430b-b5e2-1583cb5168b6" />
@@ -117,5 +117,6 @@ Em "Topic filter", escreva o nome do tópico que criou no Node-RED e clique em *
 Irá aparecer uma janela em baixo do *Topic filter* com o conteúdo existente dentro do tópico, com algo semelhante à imagem seguinte:
 
 <img width="605" height="607" alt="image" src="https://github.com/user-attachments/assets/a56f7f98-9dd1-48dc-874f-c0ecf954f5d3" />
+
 
 
