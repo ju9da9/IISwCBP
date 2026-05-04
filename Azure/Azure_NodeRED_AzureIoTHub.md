@@ -32,14 +32,21 @@ Insira um nome para o *device* e selecione as restantes opções de acordo como 
 <img width="415" height="702" alt="image" src="https://github.com/user-attachments/assets/41717999-4001-483b-adcb-06bb4d5cb4b3" />
 
 
-Quando estiver criado pode clicar no nome do dispositivo, onde poderá ver as credenciais como na imagem abaixo
+Quando estiver criado pode clicar no nome do dispositivo, onde poderá ver as credenciais como na imagem abaixo.
+A Primary key setrá importante para quando realizar o processo de onboarding. Copie e guarde esta chave para ser utilizada posteriormente.
 
 <img width="1324" height="627" alt="image" src="https://github.com/user-attachments/assets/7c8709f2-b547-4981-a010-c6e32a75e9a5" />
 
+No Node-RED deverá instalar a pallete @node-red-contrib-azure-iothub e procurar pelo node *Azure IoT Hub*.
 
+Deverá escolher selecionar como protocolo de comunicação a opção *MQTT* e no *Hostname*, deverá ser escrito o seguinte:
+```
 
+[IoT Hub Name].azure-devices.net
 
-
+```
+A imagem seguinte ajudará a encontrar o Hostname na Azure Portal.
+<img width="1280" height="720" alt="PreencherIoTHubNode" src="https://github.com/user-attachments/assets/50971d1a-d000-4827-adf4-bea598172ffa" />
 
 
 
