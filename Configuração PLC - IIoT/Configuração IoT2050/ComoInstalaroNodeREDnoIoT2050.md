@@ -1,12 +1,13 @@
 
 
-```
-┌─────────────────────────────┐
-│  Node.js                    │
-│  Node-RED  (porta 1880)     │
-│  Mosquitto (porta 1883)     │
-└─────────────────────────────┘
-```
+NOTA: A Instalação e o update dos firmwares originais podem ser encontrados no [Git Hub da Siemens dedicado ao IOT2050](https://github.com/SIMATICmeetsLinux)
+
+Este tutorial pretende instalar um docker container a correr o seguinte:
+> Node.js                    
+> Node-RED  (porta 1880)     
+> Mosquitto (porta 1883)     
+
+
 
 1️⃣ Preparar diretórios no HOST (IOT2050)
 
