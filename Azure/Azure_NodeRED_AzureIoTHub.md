@@ -37,7 +37,7 @@ A Primary key setrá importante para quando realizar o processo de onboarding. C
 
 <img width="1324" height="627" alt="image" src="https://github.com/user-attachments/assets/7c8709f2-b547-4981-a010-c6e32a75e9a5" />
 
-No Node-RED deverá instalar a pallete @node-red-contrib-azure-iothub e procurar pelo node *Azure IoT Hub*.
+No Node-RED deverá instalar a pallete [@node-red-contrib-azure-iothub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) e procurar pelo node *Azure IoT Hub*.
 
 Deverá escolher selecionar como protocolo de comunicação a opção *MQTT* e no *Hostname*, deverá ser escrito o seguinte:
 ```
@@ -50,7 +50,7 @@ A imagem seguinte ajudará a encontrar o Hostname na Azure Portal.
 
 
 
-
+De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da seguinte maneira
 
 
 
