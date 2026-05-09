@@ -22,7 +22,7 @@ O primeiro passo passa por criar os modelos para os Assets.
 No caso criado, estas foram as tabelas utilizadas para criar os Modelos:
 
 
-
+<p align="center">
 | Property Name (SiteWise) | Property Alias                                      | Tipo    |
 |--------------------------|----------------------------------------------------|---------|
 | Count_Distro_1           | /Factory_1/Distribution_System_1/Count_Distro_1    | integer |
@@ -32,7 +32,7 @@ No caso criado, estas foram as tabelas utilizadas para criar os Modelos:
 | Count_Distro_5           | /Factory_1/Distribution_System_1/Count_Distro_5    | integer |
 | Count_Distro_6           | /Factory_1/Distribution_System_1/Count_Distro_6    | integer |
 | Count_Distro_Total       | /Factory_1/Distribution_System_1/Count_Distro_Total| integer |
-
+</p>
 
 
 
