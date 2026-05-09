@@ -6,8 +6,9 @@ O primeiro passo desta ligação passa pela criação e configuração da Azure 
 
 
 Quando estiver na página, clique em *create*
-
+<p align="center">
 <img width="294" height="151" alt="image" src="https://github.com/user-attachments/assets/16101cbe-17a9-4fd5-ba68-773c8f9115ea" />
+</p>
 
 Clique em *Create New* para inserir o Resource Group. Para ser mais fácil use este grupo em todos os restantes serviços se for possível. Clica em *Review and create*.
 
