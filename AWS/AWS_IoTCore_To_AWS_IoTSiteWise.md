@@ -159,8 +159,10 @@ Como é muito provável que não terá uma uma IAM Role criada para esta funcion
 
 Para que haja permissão para que os dados sejam redirecionados para a  IoT SiteWise, deve ser editada a role recentemente criada. Cique em "view", onde será redirecionado para uma nova página.
 
+<p align="center">
 <img width="576" height="82" alt="image" src="https://github.com/user-attachments/assets/3c792c9d-8349-4f87-a55e-a1aea1156aa2" />
 </p>
+
 Na página que foi aberta, vá a *Permissions policies*, e em "Add permissions", escolha a opção *Create inline policy*.
 
 <p align="center">
