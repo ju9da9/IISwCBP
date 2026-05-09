@@ -52,11 +52,13 @@ A imagem seguinte ajudará a encontrar o Hostname na Azure Portal.
 
 De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da seguinte maneira
 
+1. Devo ter o parâmetro "deviceId" que representa o nome do dispositivo (identificado como DeviceId na plataforma Azure).
+2. Devo ter o parâmetro "key", que é a chave primária do dispositivo criado na plataforma (identificado como Primary Key na plataforma Azure).
+3. Devo indicar o protocolo de comunicação a ser usado (mqtt, http, amqp, amqps).
+4. Devo inserir os dados a serem enviados no formato indicado abaixo.
 
 
-
-
-
+[COLOCAR IMAGEM]
 
 
 
