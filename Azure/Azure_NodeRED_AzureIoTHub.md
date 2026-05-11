@@ -24,7 +24,7 @@ O passo seguinte passa pela criação de *devices*. Um device é.... __(explicar
 <p align="center">
 <img width="287" height="456" alt="image" src="https://github.com/user-attachments/assets/06a92a06-aad7-4411-a2fd-4f7579ccb282" />
 </p>
-Na página clique em *Add device*.
+Na página clique em **Add device** .
 
 <img width="830" height="196" alt="image" src="https://github.com/user-attachments/assets/0c63aec8-50b5-4c18-b668-00f37e07189b" />
 </p>
