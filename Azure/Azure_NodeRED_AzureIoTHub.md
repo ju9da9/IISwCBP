@@ -60,8 +60,9 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 3. Devo indicar o protocolo de comunicação a ser usado (mqtt, http, amqp, amqps).
 4. Devo inserir os dados a serem enviados no formato indicado abaixo.
 
-
-[COLOCAR IMAGEM]
+<p align="center">
+<img width="1280" height="720" alt="FunctionAzureIoTHubnode" src="https://github.com/user-attachments/assets/028f88f3-a51f-4ec5-a2bc-5553c78d47fd" />
+</p>
 
 
 
