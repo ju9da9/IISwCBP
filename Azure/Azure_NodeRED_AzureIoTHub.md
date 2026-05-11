@@ -53,12 +53,12 @@ A imagem seguinte ajudará a encontrar o Hostname na Azure Portal.
 </p>
 
 
-De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da seguinte maneira
+De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da seguinte maneira:
 
-1. Devo ter o parâmetro "deviceId" que representa o nome do dispositivo (identificado como DeviceId na plataforma Azure).
-2. Devo ter o parâmetro "key", que é a chave primária do dispositivo criado na plataforma (identificado como Primary Key na plataforma Azure).
-3. Devo indicar o protocolo de comunicação a ser usado (mqtt, http, amqp, amqps).
-4. Devo inserir os dados a serem enviados no formato indicado abaixo.
+1. Deve ter o parâmetro "deviceId" que representa o nome do dispositivo (identificado como DeviceId na plataforma Azure).
+2. Deve ter o parâmetro "key", que é a chave primária do dispositivo criado na plataforma (identificado como Primary Key na plataforma Azure).
+3. Deve indicar o protocolo de comunicação a ser usado (mqtt, http, amqp, amqps).
+4. Deve inserir os dados a serem enviados no formato indicado abaixo.
 
 <p align="center">
 <img width="1280" height="720" alt="FunctionAzureIoTHubnode" src="https://github.com/user-attachments/assets/028f88f3-a51f-4ec5-a2bc-5553c78d47fd" />
