@@ -1,0 +1,1 @@
+# Configuração PLC - IIoT
