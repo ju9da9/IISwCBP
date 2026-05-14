@@ -77,10 +77,16 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 <img width="1280" height="720" alt="FunctionAzureIoTHubnode" src="https://github.com/user-attachments/assets/028f88f3-a51f-4ec5-a2bc-5553c78d47fd" />
 </p>
 
+------------------------------------------
+
 
 ## *MQTT Out* node
 
+dfbghjkkhgfncbfghjjhhgcfhhijjhgkiku
 
+
+
+-----------------------------------------
 
 
 
