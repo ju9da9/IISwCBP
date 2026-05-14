@@ -45,6 +45,12 @@ A Primary key setrá importante para quando realizar o processo de onboarding. C
 <img width="1324" height="627" alt="image" src="https://github.com/user-attachments/assets/7c8709f2-b547-4981-a010-c6e32a75e9a5" />
 </p>
 
+
+Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por *Azure IoT Hub* node e do *MQTT Out* node
+
+
+## *Azure IoT Hub* node
+
 No Node-RED deverá instalar a pallete [@node-red-contrib-azure-iothub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) e procurar pelo node *Azure IoT Hub*.
 
 Deverá escolher selecionar como protocolo de comunicação a opção *MQTT* e no *Hostname*, deverá ser escrito o seguinte:
@@ -72,7 +78,7 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 </p>
 
 
-
+## *MQTT Out* node
 
 
 
