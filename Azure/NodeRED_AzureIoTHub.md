@@ -67,7 +67,7 @@ A imagem seguinte ajudará a encontrar o Hostname na Azure Portal.
 </p>
 
 
-De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da seguinte maneira:
+De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o nó *function*, e estruturá-lo da maneira indicada abaixo e na imagem seguinte:
 
 1. Deve ter o parâmetro "deviceId" que representa o nome do dispositivo (identificado como DeviceId na plataforma Azure).
 2. Deve ter o parâmetro "key", que é a chave primária do dispositivo criado na plataforma (identificado como Primary Key na plataforma Azure).
@@ -85,7 +85,7 @@ Para usar MQTT através dos seus nodes é preciso recorrer ao uso do SAS token. 
 funciona como umaa palavra-passe para a ligação ao ponto de extremidade do Azure IoT Hub através do protocolo MQTT e 
 pode ser gerado na nuvem utilizando a interface de linha de comandos do Azure ou a extensão do VS Code para o Azure IoT Hub.
 
-Use o MQTT out node, e escreva
+Use o MQTT out node, e escreva o tópico consoante a imagem abaixo e crie um novo server.
 
 
 
@@ -93,20 +93,29 @@ Use o MQTT out node, e escreva
 <img width="1280" height="720" alt="Configração do MQTTNode-part1pptx" src="https://github.com/user-attachments/assets/e6a6287d-5e64-4397-8f75-83c99e4d5180" />
 </p>
 
+Dentro das configurações do novo server, faça os seguintes passos:
+
+1. Escreva o hostname do IoT Hub criado.
+2. Utilize o port 8883 para a ligação.
+3. Como Client Id, use o nome do device criado.
+4. Ative a conexão TLS e entre nas suas configurações.
+
 
 <p align="center">
 <img width="1280" height="720" alt="Configração do MQTTNode-part2" src="https://github.com/user-attachments/assets/31468482-da8d-43c4-a2b9-811ebad1c810" />
 </p>
 
-Ddfbgfghg
+Selecione na opção *Verify server certificate* e não necessita de preencher nada das opções para além no nome da configuração TLS. Clique em *Add*/*Update* e depois em *Done* para terminar a configuração do *MQTT out* node.
 
 <p align="center">
 <img width="503" height="567" alt="ConfiguracaoMQTTNode-part3" src="https://github.com/user-attachments/assets/e9ce5c88-f05e-4668-89c1-820e85be117c" />
 </p>
 
+Com o separador do Node-RED aberto, adicione outro separador do seu browser, vá á Azure portal e abra a CLI da Azure.
 
-
-
+<p align="center">
+<img width="1433" height="621" alt="image" src="https://github.com/user-attachments/assets/3e84074f-322e-4b96-b8ad-8fceb20aaad7" />
+</p>
 
 
 
