@@ -1,7 +1,6 @@
 # Ligação Node-RED -> Azure IoT Hub
 
 
-
 O primeiro passo desta ligação passa pela criação e configuração da Azure IoT Hub. 
 
 
@@ -46,7 +45,7 @@ A Primary key setrá importante para quando realizar o processo de onboarding. C
 </p>
 
 
-Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por __*Azure IoT Hub*__ node e do __*MQTT Out*__ , descritas nas subsecções seguintes.
+Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por [__*Azure IoT Hub*__ node](#azure-iot-hub-node) e do [__*MQTT Out*__ node](#mqtt-out-node) , descritas nas subsecções seguintes.
 O *MQTT out* node oferece maior flexibilidade e controlo sobre a comunicação e o payload, mas exige configuração manual e a criação de SAS token, enquanto o *Azure IoT Hub* node simplifica a integração e autenticação com o Azure, embora com menos liberdade para personalizar o payload.
 
 ---------------------------------------------------------------------
@@ -77,6 +76,8 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 <p align="center">
 <img width="1280" height="720" alt="FunctionAzureIoTHubnode" src="https://github.com/user-attachments/assets/028f88f3-a51f-4ec5-a2bc-5553c78d47fd" />
 </p>
+
+Com estas configurações, está pronto para realizar a comunicação entre o dispositivo e a Azure através do *Azure IoT Hub* node.
 
 ------------------------------------------
 ## *MQTT Out* node
@@ -134,9 +135,11 @@ Explicação:
 
 Aceite tudo o que é pedido pelo CLI para realizar downloads ao escrever 'Y' e clicar em *Enter*.
 
+<p align="center">
 <img width="1247" height="252" alt="image" src="https://github.com/user-attachments/assets/e905283e-f8be-4fe0-87b9-2ef1cc6fb8f9" />
+</p>
 
-Após a realização do download irá aparecer uma chave semelhante ao que está em baixo. Deverá copiar inteiramente e guardar esta chave para utilizá-la enquanto password.
+Após a realização do download irá aparecer uma chave semelhante ao que está em baixo. Deverá copiar o conteúdo dentro das aspas do parâmetro __"sas"__ e guardar esta chave para utilizá-la enquanto password.
 
 ```
 {
@@ -144,95 +147,46 @@ Após a realização do download irá aparecer uma chave semelhante ao que está
 }
 ```
 
+> NOTA: Também pode gerar um SAS Token se instalar a Azure IoT Hub Extension no VS Code e iniciar sessão com a sua conta. Tendo instalado a extensão, vá ao separdor "Explorer" <img width="53" height="52" alt="image" src="https://github.com/user-attachments/assets/2d0e81f5-b10e-4ad2-93fa-75c6757bec38" /> , onde irá aparecer um separador dedicado à Azure IoT Hub, vá em "Devices", clique no botão direito em cima do device que deseja, e clique em *Generate SAS Token for Device*.
+>
+> <p align="center">
+> <img width="483" height="575" alt="image" src="https://github.com/user-attachments/assets/c1b44021-6086-4dae-ac60-e5e4b80c08d0" />
+> </p>
+>
+> 
+> Insira a duração do token em horas e clique em *Enter*. Irá aparecer na linha de comandos do VS Code a chave gerada.
+>
+> <p align="center">
+> <img width="728" height="80" alt="image" src="https://github.com/user-attachments/assets/67955697-b828-4d52-b4a9-7dab14af02a3" />
+> </p>
+>
+
+Volte ao separador do Node-RED no seu browser, e vá ao *MQTT Out* node, entre nas configurações do server, entre separador "Security" e escreva o *username* conforme está na imagem abaixo e cole a chave obtida no parâmetro *password*.
+
 <p align="center">
-<img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
+<img width="976" height="541" alt="image" src="https://github.com/user-attachments/assets/0c7595e9-b52a-4306-800c-7f90a5a691d7" />
 </p>
+
+Assim está configurada a ligação através do *MQTT Out* node.
 
 -----------------------------------------
 
 
+Adicione o node *function* e escreva o seu payload de maneira semelhante ao que está na imagem seguinte.
 
+<p align="center">
+<img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
+</p>
 
 
+Faça a ligação entre os nodes e clique em *Deploy*.
 
+<p align="center">
+<img width="1313" height="214" alt="image" src="https://github.com/user-attachments/assets/25fe9181-628f-46c0-947b-c6e0f49eb176" />
+</p>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+> NOTA IMPORTANTE: Escolha apenas um destes métodos para poder realizar a comunicação entre o seu dispositivo e a Azure.
 
 
 
