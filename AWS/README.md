@@ -7,4 +7,6 @@ Explicar o esquema de ligação desde o Node-RED até ào Grafana
 Explicar policies, rules, IAM
 
 
+<img width="1325" height="583" alt="EsquemaDe_Ligacao_AWS" src="https://github.com/user-attachments/assets/ad3619a1-9bed-4d7d-994e-b333383c625c" />
+
 
