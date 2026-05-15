@@ -46,7 +46,8 @@ A Primary key setrá importante para quando realizar o processo de onboarding. C
 </p>
 
 
-Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por __*Azure IoT Hub*__ node e do __*MQTT Out*__ node
+Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por __*Azure IoT Hub*__ node e do __*MQTT Out*__ , descritas nas subsecções seguintes.
+O *MQTT out* node oferece maior flexibilidade e controlo sobre a comunicação e o payload, mas exige configuração manual e a criação de SAS token, enquanto o *Azure IoT Hub* node simplifica a integração e autenticação com o Azure, embora com menos liberdade para personalizar o payload.
 
 ---------------------------------------------------------------------
 ## *Azure IoT Hub* node
@@ -80,23 +81,32 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 ------------------------------------------
 ## *MQTT Out* node
 
-Para usar o *MQTT out* node é preciso recorrer ao uso do SAS token. O SAS token é uma credencial temporária gerada a partir da chave de segurança do dispositivo,
+Para usar MQTT através dos seus nodes é preciso recorrer ao uso do SAS token. O SAS token é uma credencial temporária gerada a partir da chave de segurança do dispositivo,
 funciona como umaa palavra-passe para a ligação ao ponto de extremidade do Azure IoT Hub através do protocolo MQTT e 
 pode ser gerado na nuvem utilizando a interface de linha de comandos do Azure ou a extensão do VS Code para o Azure IoT Hub.
 
-Para tal use 
+Use o MQTT out node, e escreva
+
 
 
 <p align="center">
-<img width="1280" height="720" alt="Configração do MQTTNode-part1" src="https://github.com/user-attachments/assets/31468482-da8d-43c4-a2b9-811ebad1c810" />
+<img width="1280" height="720" alt="Configração do MQTTNode-part1pptx" src="https://github.com/user-attachments/assets/e6a6287d-5e64-4397-8f75-83c99e4d5180" />
 </p>
 
 
 <p align="center">
-<img width="503" height="567" alt="ConfiguracaoMQTTNode-2" src="https://github.com/user-attachments/assets/e9ce5c88-f05e-4668-89c1-820e85be117c" />
+<img width="1280" height="720" alt="Configração do MQTTNode-part2" src="https://github.com/user-attachments/assets/31468482-da8d-43c4-a2b9-811ebad1c810" />
 </p>
 
-hjklhkvhcgvjkhljvhvhkhjgvhkgvh
+Ddfbgfghg
+
+<p align="center">
+<img width="503" height="567" alt="ConfiguracaoMQTTNode-part3" src="https://github.com/user-attachments/assets/e9ce5c88-f05e-4668-89c1-820e85be117c" />
+</p>
+
+
+
+
 
 
 
