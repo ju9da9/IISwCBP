@@ -80,13 +80,15 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 ------------------------------------------
 ## *MQTT Out* node
 
-Para usar o MQTT out node é preciso recorrer ao uso do SAS Token. O token SAS é uma credencial temporária gerada a partir da chave de segurança do dispositivo,
+Para usar o *MQTT out* node é preciso recorrer ao uso do SAS token. O SAS token é uma credencial temporária gerada a partir da chave de segurança do dispositivo,
 funciona como umaa palavra-passe para a ligação ao ponto de extremidade do Azure IoT Hub através do protocolo MQTT e 
-pode ser gerado na nuvem utilizando a interface de linha de comandos do Azure ou a extensão do VS Code para o Azure IoT Hub 
+pode ser gerado na nuvem utilizando a interface de linha de comandos do Azure ou a extensão do VS Code para o Azure IoT Hub.
+
+Para tal use 
 
 
 <p align="center">
-<img width="640" height="527" alt="ConfiguracaoMQTTNode-1" src="https://github.com/user-attachments/assets/9397a979-6786-4b09-99a3-4308db80adcd" />
+<img width="1280" height="720" alt="Configração do MQTTNode-part1" src="https://github.com/user-attachments/assets/31468482-da8d-43c4-a2b9-811ebad1c810" />
 </p>
 
 
