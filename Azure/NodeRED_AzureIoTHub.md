@@ -195,10 +195,7 @@ Faça a ligação entre os nodes e clique em *Deploy*.
 
 
 
-
-
-
-
+# Como visualizar o payload na Azure portal
 
 
 A visualização dos dados na Microsoft Azure não é direta – é preciso fazer um conjunto de passos para ser possível.
