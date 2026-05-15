@@ -118,6 +118,19 @@ Com o separador do Node-RED aberto, adicione outro separador do seu browser, vá
 </p>
 
 
+Explicação:
+	• --hub-name <nome do IoT Hub>  → o nome do teu IoT Hub
+	•  --device-id <nome do device> → nome exato do dispositivo
+	• --duration 3600 → token válido por 1 hora (pode pôr-se mais, ex: 86400 = 24h)
+
+```
+az iot hub generate-sas-token \
+  --hub-name <nome do IoT Hub> \
+  --device-id <nome do device> \
+  --duration 3600
+
+```
+
 
 <p align="center">
 <img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
@@ -126,9 +139,11 @@ Com o separador do Node-RED aberto, adicione outro separador do seu browser, vá
 -----------------------------------------
 
 
+# Referências
 
+[Connecting Node-Red to Azure IoT Hub using MQTT nodes. | by Nikhil Kinkar | Medium](https://medium.com/@nikhilkinkar/connecting-node-red-to-azure-iot-hub-using-mqtt-nodes-6e9160549348)
 
-
+[Azure IoT - The Complete Guide](https://www.udemy.com/course/az-220-microsoft-azure-iot-developer-certification-2022/)
 
 
 
