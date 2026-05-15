@@ -46,9 +46,9 @@ A Primary key setrá importante para quando realizar o processo de onboarding. C
 </p>
 
 
-Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por *Azure IoT Hub* node e do *MQTT Out* node
+Existem duas maneira para enviar dados para a Azure IoT Hub no Node-RED: Por __*Azure IoT Hub*__ node e do __*MQTT Out*__ node
 
-
+---------------------------------------------------------------------
 ## *Azure IoT Hub* node
 
 No Node-RED deverá instalar a pallete [@node-red-contrib-azure-iothub](https://flows.nodered.org/node/node-red-contrib-azure-iot-hub) e procurar pelo node *Azure IoT Hub*.
@@ -78,15 +78,21 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 </p>
 
 ------------------------------------------
-
-
 ## *MQTT Out* node
 
-Ao usar o 
+Para usar o MQTT out node é preciso recorrer ao uso do SAS Token. O token SAS é uma credencial temporária gerada a partir da chave de segurança do dispositivo,
+funciona como umaa palavra-passe para a ligação ao ponto de extremidade do Azure IoT Hub através do protocolo MQTT e 
+pode ser gerado na nuvem utilizando a interface de linha de comandos do Azure ou a extensão do VS Code para o Azure IoT Hub 
 
 
-
+<p align="center">
 <img width="640" height="527" alt="ConfiguracaoMQTTNode-1" src="https://github.com/user-attachments/assets/9397a979-6786-4b09-99a3-4308db80adcd" />
+</p>
+
+
+<p align="center">
+<img width="503" height="567" alt="ConfiguracaoMQTTNode-2" src="https://github.com/user-attachments/assets/e9ce5c88-f05e-4668-89c1-820e85be117c" />
+</p>
 
 hjklhkvhcgvjkhljvhvhkhjgvhkgvh
 
@@ -95,8 +101,6 @@ hjklhkvhcgvjkhljvhvhkhjgvhkgvh
 <p align="center">
 <img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
 </p>
-
-
 
 -----------------------------------------
 
