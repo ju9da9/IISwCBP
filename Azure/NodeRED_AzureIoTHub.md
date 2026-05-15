@@ -139,11 +139,7 @@ az iot hub generate-sas-token \
 -----------------------------------------
 
 
-# Referências
 
-[Connecting Node-Red to Azure IoT Hub using MQTT nodes. | by Nikhil Kinkar | Medium](https://medium.com/@nikhilkinkar/connecting-node-red-to-azure-iot-hub-using-mqtt-nodes-6e9160549348)
-
-[Azure IoT - The Complete Guide](https://www.udemy.com/course/az-220-microsoft-azure-iot-developer-certification-2022/)
 
 
 
@@ -270,3 +266,12 @@ Após aceitar a instalação das extensões e do primeiro conjunto de dados foi 
 </p>
 
 Esta imagem confima que os dados estão a ser enviados para a Cloud.
+
+
+
+
+# Referências
+
+[Connecting Node-Red to Azure IoT Hub using MQTT nodes. | by Nikhil Kinkar | Medium](https://medium.com/@nikhilkinkar/connecting-node-red-to-azure-iot-hub-using-mqtt-nodes-6e9160549348)
+
+[Azure IoT - The Complete Guide](https://www.udemy.com/course/az-220-microsoft-azure-iot-developer-certification-2022/)
