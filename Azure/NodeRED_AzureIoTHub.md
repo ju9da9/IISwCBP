@@ -82,7 +82,19 @@ De seguida deve ser parametrizado o payload a ser enviado. Para tal, deve usar o
 
 ## *MQTT Out* node
 
-dfbghjkkhgfncbfghjjhhgcfhhijjhgkiku
+Ao usar o 
+
+
+
+<img width="640" height="527" alt="ConfiguracaoMQTTNode-1" src="https://github.com/user-attachments/assets/9397a979-6786-4b09-99a3-4308db80adcd" />
+
+hjklhkvhcgvjkhljvhvhkhjgvhkgvh
+
+
+
+<p align="center">
+<img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
+</p>
 
 
 
