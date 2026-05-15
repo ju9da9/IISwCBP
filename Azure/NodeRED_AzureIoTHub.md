@@ -118,10 +118,7 @@ Com o separador do Node-RED aberto, adicione outro separador do seu browser, vá
 </p>
 
 
-Explicação:
-	• --hub-name <nome do IoT Hub>  → o nome do teu IoT Hub
-	•  --device-id <nome do device> → nome exato do dispositivo
-	• --duration 3600 → token válido por 1 hora (pode pôr-se mais, ex: 86400 = 24h)
+Quando a CLI estiver aberta, escreva o seguinte comando que permite gerar o SAS Token
 
 ```
 az iot hub generate-sas-token \
@@ -130,7 +127,22 @@ az iot hub generate-sas-token \
   --duration 3600
 
 ```
+Explicação:
+* --hub-name <nome do IoT Hub>  --> o nome do teu IoT Hub
+* --device-id <nome do device>  --> nome exato do dispositivo
+* --duration 3600 --> duração do token em segundos (neste caso válido por 1 hora, mas pode pôr-se mais, ex: 86400 = 24h)
 
+Aceite tudo o que é pedido pelo CLI para realizar downloads ao escrever 'Y' e clicar em *Enter*.
+
+<img width="1247" height="252" alt="image" src="https://github.com/user-attachments/assets/e905283e-f8be-4fe0-87b9-2ef1cc6fb8f9" />
+
+Após a realização do download irá aparecer uma chave semelhante ao que está em baixo. Deverá copiar inteiramente e guardar esta chave para utilizá-la enquanto password.
+
+```
+{
+  "sas": "SharedAccessSignature sr=<YourIoTHubName>.azure-devices.net%2Fdevices%2F<YourDeviceName>&sig=<SomeRandomSignatureString>&se=1762399972"
+}
+```
 
 <p align="center">
 <img width="479" height="569" alt="MQTT_funcao" src="https://github.com/user-attachments/assets/48adf118-6fc9-4ff3-85fd-a5756f08c2c1" />
