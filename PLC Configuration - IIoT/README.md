@@ -6,4 +6,3 @@ Explicar que o programa TIA Portal está configurado para conectar o S7-1500 com
 
 Falar como configurar o OPC UA Server 
 
-Falar o Procedimento de configurar o IOT2050 e como fazer o Docker container
