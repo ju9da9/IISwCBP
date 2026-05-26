@@ -16,7 +16,11 @@ Para poder enviar dados para a Azure Digital twins a partir da Azure IoT é prec
 
 Através da linha de comandos do VS Code, faça os seguintes passos:
 
-2º) `dotnet publish -c Release` -> p/ fazer debug
+2º) Para fazer debug deverá colocar o seguinte na linha de comandos:
+
+```
+dotnet publish -c Release
+```
 
 > *NOTA IMPORTANTE:* é necessário que assim que for feito o 1º comando, para ir à pasta "publish", clicar no botão direito do rato em cima da pasta mencionada e selecionar a opção "Reveal in File Explorer"
 
@@ -35,12 +39,12 @@ Selecione todos os ficheiros que se encontram na pasta e comprima-os. O ficheiro
 
 3ºp) Já c/ o ficheiro zipado, deve ir à pasta pela linha de comandos do VS Code, e ir à pasta do ficheiro zipado.
 
-´´´
+```
 cd bin/release/net6.0/publish
-´´´
+```
 
 4ºp) Publique o ficheiro zipado e envie para a cloud através do seguinte comando
 
-´´´
+```
 az functionapp deployment source config-zip -g <nome-do-grupo-na-cloud> -n <nome-da-function-app> --src <Nome-da-função.zip>
-´´´
+```
