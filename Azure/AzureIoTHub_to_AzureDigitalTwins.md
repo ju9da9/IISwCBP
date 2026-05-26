@@ -18,7 +18,7 @@ Através da linha de comandos do VS Code, faça os seguintes passos:
 
 2º) `dotnet publish -c Release` -> p/ fazer debug
 
->> *NOTA IMPORTANTE:* é necessário que assim que for feito o 1º comando, para ir à pasta "publish", clicar no botão direito do rato em cima da pasta mencionada e selecionar a opção "Reveal in File Explorer"
+> *NOTA IMPORTANTE:* é necessário que assim que for feito o 1º comando, para ir à pasta "publish", clicar no botão direito do rato em cima da pasta mencionada e selecionar a opção "Reveal in File Explorer"
 
 <img width="1271" height="1012" alt="image" src="https://github.com/user-attachments/assets/5fb9a2d1-7412-47d7-a872-97611f41eb7e" />
 
