@@ -6,6 +6,16 @@ Para poder enviar dados para a Azure Digital twins a partir da Azure IoT é prec
 
 
 
+## Como criar uma função
+
+<img width="1190" height="601" alt="image" src="https://github.com/user-attachments/assets/afb1bb64-fffa-4a33-a4c1-c04681721457" />
+
+
+
+
+
+
+
 
 ## Como publicar uma função no VS Code
 
