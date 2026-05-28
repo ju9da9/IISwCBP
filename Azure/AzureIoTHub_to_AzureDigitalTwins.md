@@ -12,6 +12,13 @@ Para poder enviar dados para a Azure Digital twins a partir da Azure IoT é prec
 
 
 
+<img width="755" height="849" alt="image" src="https://github.com/user-attachments/assets/870fafa6-b0cf-450d-9141-5528dc51a60c" />
+
+
+<img width="742" height="852" alt="image" src="https://github.com/user-attachments/assets/f1a8d355-abc3-4e6d-817f-0c5626c3d83a" />
+
+
+<img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/7407323c-92c5-45b9-aecf-103eb24a2e8c" />
 
 
 
@@ -51,7 +58,7 @@ Selecione todos os ficheiros que se encontram na pasta e comprima-os. O ficheiro
 
 
 
-3ºp) Já c/ o ficheiro zipado, deve ir à pasta pela linha de comandos do VS Code, e ir à pasta do ficheiro zipado.
+3ºp) Já com o ficheiro zipado, deve ir à pasta pela linha de comandos do VS Code, e ir à pasta do ficheiro zipado.
 
 ```
 cd bin/release/net6.0/publish
