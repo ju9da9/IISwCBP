@@ -6,13 +6,13 @@ It contains a set of manuals/tutorials that allows to connect Programmable Logic
 
 Here is the structure of this repository:
 
-- AWS:
+- **AWS**:
 
-- Azure
+- **Azure**:
 
-- Insights Hub
+- **Insights Hub**:
 
-- PLC Configuration - IIoT
+- **PLC Configuration - IIoT**:
 
 
 
@@ -24,7 +24,12 @@ Here is the structure of this repository:
 
 
 
-## Notas Importantes
+
+---
+
+## Contact
+
+For more information, please contact: [juda.imbo99@gmail.com](mailto:juda.imbo99@gmail.com)
 
 
 
