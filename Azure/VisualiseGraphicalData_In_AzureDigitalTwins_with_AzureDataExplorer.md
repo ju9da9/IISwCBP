@@ -124,6 +124,7 @@ No final , pode abrir o Azure data Explorer para  confirmar a criaçao
 </p>
 
 Na Azure Digital Twins:
+Clique no botão (já ativada) da data history da Azure Digital Twins
 
 <p align="center">
 <img width="1393" height="741" alt="image" src="https://github.com/user-attachments/assets/a9982849-3fbd-4363-abe6-e947d4f6153d" />
@@ -132,7 +133,9 @@ Na Azure Digital Twins:
 <p align="center">
 <img width="929" height="631" alt="image" src="https://github.com/user-attachments/assets/7ab3d1e9-f953-47db-90db-201b07552f80" />
 </p>
-<img width="932" height="628" alt="image" src="https://github.com/user-attachments/assets/938b8903-e862-49bf-a334-4513581c5a1d" />
 
+<p align="center">
+<img width="932" height="628" alt="image" src="https://github.com/user-attachments/assets/938b8903-e862-49bf-a334-4513581c5a1d" />
+</p>
 
 
