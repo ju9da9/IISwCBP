@@ -15,11 +15,12 @@ Quando estiver na página referente ao serviço, vá ao canto superior esquerdo 
 <img width="546" height="246" alt="image" src="https://github.com/user-attachments/assets/8ab6dcff-4296-43cc-b20a-a4a89e33d440" />
 </p>
 
-Escolha a opção Consumption, sendo esta op no qual a versão Azure for students permite não pagar nada.
+Escolha a opção Consumption
 
 <p align="center">
 <img width="1190" height="601" alt="image" src="https://github.com/user-attachments/assets/afb1bb64-fffa-4a33-a4c1-c04681721457" />
 </p>
+
 
 <p align="center">
 <img width="755" height="849" alt="image" src="https://github.com/user-attachments/assets/870fafa6-b0cf-450d-9141-5528dc51a60c" />
