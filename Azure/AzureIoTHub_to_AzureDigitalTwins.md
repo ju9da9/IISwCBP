@@ -21,6 +21,7 @@ Escolha a opção Consumption
 <img width="1190" height="601" alt="image" src="https://github.com/user-attachments/assets/afb1bb64-fffa-4a33-a4c1-c04681721457" />
 </p>
 
+Preencha os campos referentes à subscrição, ao Resource Group e ao nome da Function App. As restantes opções deverão ser configuradas de acordo com as definições apresentadas na imagem seguinte.
 
 <p align="center">
 <img width="755" height="849" alt="image" src="https://github.com/user-attachments/assets/870fafa6-b0cf-450d-9141-5528dc51a60c" />
