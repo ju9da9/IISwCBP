@@ -8,18 +8,30 @@ Para poder enviar dados para a Azure Digital twins a partir da Azure IoT é prec
 
 ## How to create a function app
 
+Na Azure Portal, pesquise por _Function App_.
+Quando estiver na página referente ao serviço, vá ao canto superior esquerdo da página e clique em "Create".
+
+<p align="center">
+<img width="546" height="246" alt="image" src="https://github.com/user-attachments/assets/8ab6dcff-4296-43cc-b20a-a4a89e33d440" />
+</p>
+
+Escolha a opção Consumption, sendo esta op no qual a versão Azure for students permite não pagar nada.
+
+<p align="center">
 <img width="1190" height="601" alt="image" src="https://github.com/user-attachments/assets/afb1bb64-fffa-4a33-a4c1-c04681721457" />
+</p>
 
-
-
+<p align="center">
 <img width="755" height="849" alt="image" src="https://github.com/user-attachments/assets/870fafa6-b0cf-450d-9141-5528dc51a60c" />
+</p>
 
-
+<p align="center">
 <img width="742" height="852" alt="image" src="https://github.com/user-attachments/assets/f1a8d355-abc3-4e6d-817f-0c5626c3d83a" />
+</p>
 
-
+<p align="center">
 <img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/7407323c-92c5-45b9-aecf-103eb24a2e8c" />
-
+</p>
 
 
 
