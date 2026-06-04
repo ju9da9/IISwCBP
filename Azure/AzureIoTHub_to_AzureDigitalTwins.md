@@ -15,25 +15,58 @@ Quando estiver na página referente ao serviço, vá ao canto superior esquerdo 
 <img width="546" height="246" alt="image" src="https://github.com/user-attachments/assets/8ab6dcff-4296-43cc-b20a-a4a89e33d440" />
 </p>
 
-Escolha a opção Consumption
+De todos os planos disponíveis, escolha o plano Consumption.
 
 <p align="center">
 <img width="1190" height="601" alt="image" src="https://github.com/user-attachments/assets/afb1bb64-fffa-4a33-a4c1-c04681721457" />
 </p>
 
-Preencha os campos referentes à subscrição, ao Resource Group e ao nome da Function App. As restantes opções deverão ser configuradas de acordo com as definições apresentadas na imagem seguinte.
+Preencha os campos referentes à subscrição, ao Resource Group e ao nome da Function App. 
+Em Instance Details, configure as restantes opções exatamente como na imagem:
+ - Sistema operativo: Windows
+ - Runtime stack: .NET
+ - Versão: 8 (LTS), isolated worker model
+ - Região: West Europe
+
+Após preencher, vá ao separador *Storage*.
 
 <p align="center">
 <img width="755" height="849" alt="image" src="https://github.com/user-attachments/assets/870fafa6-b0cf-450d-9141-5528dc51a60c" />
 </p>
 
+Caso não tenha uma Storage Account crie uma nova (caso já tenha continue a utilizar a que já tinha antes).
+
 <p align="center">
 <img width="742" height="852" alt="image" src="https://github.com/user-attachments/assets/f1a8d355-abc3-4e6d-817f-0c5626c3d83a" />
 </p>
 
+No separador Monitoring, na secção Application Insights, configure as opções como na imagem:
+Ative o Application Insights (Yes) e crie um novo recurso do Application Insights (caso nãoesteja criado automaticamente).
+Confirme que a região esteja em West Europe (normalmente preenchido automaticamente).
+
 <p align="center">
 <img width="750" height="449" alt="image" src="https://github.com/user-attachments/assets/7407323c-92c5-45b9-aecf-103eb24a2e8c" />
 </p>
+
+Depois vá em *Create + Review* e conclua a criação da Function App.
+
+O próximo passo será criar uma função dentro da Function App. Existem três opções disponíveis como indica a imagem de baixo. Neste caso, irá ser criada uma função no VS Code recurso a .NET 8.0 SDK e a Azure CLI, uma vez que a Microsoft disponibiliza um template de uma função para enviar os dados da Azure IoT Hub para a Azure Digital Twin onde observar [aqui](https://learn.microsoft.com/en-us/azure/digital-twins/how-to-ingest-iot-hub-data). No entanto, na pasta [Project Azure Functions Uploads], pode encontrar o projeto em C# usado para criar as funções, juntamente com instruções a serem realizadas ao criar uma função destas
+
+<p align="center">
+<img width="835" height="207" alt="image" src="https://github.com/user-attachments/assets/62ef0e25-a96c-4730-a57f-f0c1550efe1e" />
+</p>
+
+
+> É Recomendável que antes de seguir os próximos passos já tenha instalado o seguinte:
+>
+> - [Visual Studio Code](https://code.visualstudio.com/)
+> - [C# Extention](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp) para o Visual Studio Code
+> - [.NET 8.0 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+> - [Azure CLI](https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?view=azure-cli-latest&pivots=msi)
+
+
+
+
 
 
 
