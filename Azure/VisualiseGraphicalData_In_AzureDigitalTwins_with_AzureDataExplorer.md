@@ -77,7 +77,7 @@ Faz o upgrade do cluster
 
 ------------------------
 
-Na instância  da Azure Digital Twins, ir no separador Connect Outputs --> Data History. De pois clique em "Create a Connection"
+Na instância da Azure Digital Twins, ir no separador Connect Outputs --> Data History. De pois clique em "Create a Connection"
 
 <p align="center">
 <img width="1621" height="882" alt="image" src="https://github.com/user-attachments/assets/019f99f2-2c67-4615-a75d-d58aefb76db5" />
@@ -89,7 +89,7 @@ Selecione a opção "System- Assigned" no parãmetro de 'Authentication' e cliqu
 <img width="1266" height="465" alt="image" src="https://github.com/user-attachments/assets/15ec0f66-306c-4259-813d-a76b3b123ee1" />
 </p>
 
-> NOTA: Caso não tenha If you don't already have a managed identity enabled for your Azure Digital Twins instance ( , you see this page first  (https://learn.microsoft.com/en-us/azure/digital-twins/how-to-set-up-instance-portal#enabledisable-managed-identity-for-the-instance)   , asking you to turn on Identity for the instance as the first step for the data history connection. Caso já esteja ativado siga para o próximo passo
+> NOTA: Caso não tenha If you don't already have a managed identity enabled for your Azure Digital Twins instance ( , you see this [page first](https://learn.microsoft.com/en-us/azure/digital-twins/how-to-set-up-instance-portal#enabledisable-managed-identity-for-the-instance) , asking you to turn on Identity for the instance as the first step for the data history connection. Caso já esteja ativado siga para o próximo passo
 
 Na página 'Send' Preencha os requesitos com os recursos criados do Event hub e Clique em 'Next'
 
@@ -97,34 +97,43 @@ Na página 'Send' Preencha os requesitos com os recursos criados do Event hub e 
 <img width="1294" height="789" alt="image" src="https://github.com/user-attachments/assets/db8d740f-d388-4c75-bec2-33f8d275386c" />
 </p>
 
-dsfdgdfgdfdghd
+Na página 'Store', selecione a subscrição pretendida, selecionne o cluster criado anteriormente e selecione a base de dados já também criada.
+Em 'table names', dê um nome em **Property event table name**, tal como está na imagem abaixo e ative a opção **Include property removal events** (checkbox selecionada na imagem abaixo).
+Clique em **Next** para avançar.
 
 <p align="center">
 <img width="1278" height="815" alt="image" src="https://github.com/user-attachments/assets/b69888e2-18f1-4c2a-adef-1ddfe8b34a08" />
 </p>
 
-sdfgdgh
+Na página 'Permission', são apresentados os roles necessários para que a instância do **Azure Digital Twins** consiga:
+- enviar dados para o **Event Hub**
+- ligar ao **Azure Data Explorer** (cluster e base de dados)
 
+Para cada um dos blocos apresentados, atribua permissões (Grant permission) em:
+- **Azure Event Hubs Data Owner**
+- **Contributor on the Azure Data Explorer cluster**
+- **Admin on the Azure Data Explorer database**
+  
+Em cada bloco, quando surgir a mensagem de confirmação para prosseguir com a atribuição de roles, clique em **Yes**.
 <p align="center">
 <img width="1263" height="809" alt="image" src="https://github.com/user-attachments/assets/9acf5c33-cec7-4f06-8696-dfa5fcb659c4" />
 </p>
 
-> Nota: É normal O Azure Event Hubs Data Owner não estar selecionado, porque pode já existir, permitidoi que qaavence para o próximo passo
+> Nota: É normal O Azure Event Hubs Data Owner não estar selecionado, porque pode já ter permissões iguais ou superiores atribuídas manualmente, permitido que aavence para o próximo passo
+> <p align="center">
+> <img width="824" height="296" alt="image" src="https://github.com/user-attachments/assets/f176672f-ac28-4d34-8df0-ccd5f4d42771" />
+> </p>
 
-<p align="center">
-<img width="824" height="296" alt="image" src="https://github.com/user-attachments/assets/f176672f-ac28-4d34-8df0-ccd5f4d42771" />
-</p>
+Depois de concluir as atribuições necessárias, clique em **Next** para avançar para **Review + create**.
 
-No final clique em Create Connection, na página 'Review + Create'
-
-No final , pode abrir o Azure data Explorer para  confirmar a criaçao
+Após receber a confirmação de que já foi criada uma connection, clique em **Open Azure data Explorer** para confirmar.
 
 <p align="center">
 <img width="876" height="233" alt="image" src="https://github.com/user-attachments/assets/1b751e8b-b9fa-4f01-8696-0a15659d928c" />
 </p>
 
 Na Azure Digital Twins:
-Clique no botão (já ativada) da data history da Azure Digital Twins
+Clique no botão (já ativada) da data history da Azure Digital Twins, Onde poderá ver o histórico das suas variáveis em formato de gráfico ou tabela.
 
 <p align="center">
 <img width="1393" height="741" alt="image" src="https://github.com/user-attachments/assets/a9982849-3fbd-4363-abe6-e947d4f6153d" />
