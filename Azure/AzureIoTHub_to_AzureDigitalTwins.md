@@ -50,7 +50,7 @@ Confirme que a região esteja em West Europe (normalmente preenchido automaticam
 
 Depois vá em *Create + Review* e conclua a criação da Function App.
 
-O próximo passo será criar uma função dentro da Function App. Existem três opções disponíveis como indica a imagem de baixo. Neste caso, irá ser criada uma função no VS Code recurso a .NET 8.0 SDK e a Azure CLI, uma vez que a Microsoft disponibiliza um template de uma função para enviar os dados da Azure IoT Hub para a Azure Digital Twin onde observar [aqui](https://learn.microsoft.com/en-us/azure/digital-twins/how-to-ingest-iot-hub-data). No entanto, na pasta [Project Azure Functions Uploads], pode encontrar o projeto em C# usado para criar as funções, juntamente com instruções a serem realizadas ao criar uma função destas
+O próximo passo será criar uma função dentro da Function App. Existem três opções disponíveis como indica a imagem de baixo. Neste caso, irá ser criada uma função no VS Code recurso a .NET 8.0 SDK e a Azure CLI, uma vez que a Microsoft disponibiliza um template de uma função para enviar os dados da Azure IoT Hub para a Azure Digital Twin onde observar [aqui](https://learn.microsoft.com/en-us/azure/digital-twins/how-to-ingest-iot-hub-data). No entanto, na pasta [Project Azure Functions Uploads](https://github.com/ju9da9/IISwCBP/tree/main/Azure/Project%20Azure%20Functions%20Uploads), pode encontrar o projeto em C# usado para criar as funções, juntamente com instruções a serem realizadas ao criar uma função destas.
 
 <p align="center">
 <img width="835" height="207" alt="image" src="https://github.com/user-attachments/assets/62ef0e25-a96c-4730-a57f-f0c1550efe1e" />
