@@ -73,21 +73,23 @@ O próximo passo será criar uma função dentro da Function App. Existem três 
 
 ## Como publicar uma função no VS Code
 
-Caso tenha no projeto as seguintes pastas, apague-as uma vez que o comando seguinte, irá gerar estas pastas novamente:
+
+Abra o projeto no VS Code.
+Caso tenha no projeto as seguintes pastas, apague-as uma vez que nos passos seguintes, irá gerar estas pastas novamente:
 
 - bin
 - obj
 
 Através da linha de comandos do VS Code, faça os seguintes passos:
 
-Para fazer debug deverá colocar o seguinte na linha de comandos:
+Faça o debug através do seguinte comando:
 
 ```
 dotnet publish -c Release
 ```
 Este comando fará gerar de volta as pastas que foram apagadas anteriormente.
 
-> *NOTA IMPORTANTE:* é necessário que assim que for feito o 1º comando, para ir à pasta "publish", clicar no botão direito do rato em cima da pasta mencionada e selecionar a opção "Reveal in File Explorer"
+Assim que for feito o 1º comando, para ir à pasta "publish", clicar no botão direito do rato em cima da pasta mencionada e selecionar a opção "Reveal in File Explorer"
 
 <p align="center">
 <img width="1271" height="1012" alt="image" src="https://github.com/user-attachments/assets/5fb9a2d1-7412-47d7-a872-97611f41eb7e" />
