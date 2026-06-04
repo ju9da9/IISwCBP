@@ -73,7 +73,67 @@ O próximo passo será criar uma função dentro da Function App. Existem três 
 
 ## Como publicar uma função no VS Code
 
+Antes de avançar com os próximos passos, Será necessário realizar mais algumas alterações para que seja possível enviar os dados vindos do IoT hub para a Azure Digital twin instance criada.
 
+1) Deve-se colocar `ADT_SERVICE_URL` como *application setting*.
+
+1 -> Ir na Function App  
+2 -> Ir na função criada  
+3 -> Na janela pop-up da esquerda, ir em **settings** e de seguida ir em **Environment variables**  
+4 -> Nas **app settings**, clicar em **"Add"**  
+5 -> Preencha da seguinte maneira
+
+<p align="center">
+<img width="1107" height="251" alt="image" src="https://github.com/user-attachments/assets/ed95df89-f417-4d17-81c4-696d233a597c" />
+</p>
+
+>`<your-digital-twins-name>` → nome do digital twin criado
+
+>`<region>` → a região que foi inserida quando foi criado as instâncias do IoT hub, o digital twin e a Function App
+
+6 -> Clique em **"Apply"** 2x
+
+
+2) Dar à Function App permissão para a Azure Digital twins
+
+1 -> Ir à Function App criada e, na janela pop-up, ir a **Settings** -> **Identity**  
+2 -> Colocar a opção em **"ON"** e salvar a alteração, como indica a imagem seguinte
+
+<p align="center">
+<img width="1302" height="284" alt="image" src="https://github.com/user-attachments/assets/2feecea6-a81c-4d98-8b0a-c1af4914d3a6" />
+</p>
+
+3 -> Ir à instância criada no **Azure Digital Twins**.  
+→ Ir a **Access control (IAM)** -> **"Add role assignment"**
+
+<p align="center">
+<img width="1221" height="619" alt="image" src="https://github.com/user-attachments/assets/b66aeedc-4755-47d3-92d0-ec3a1b8bc943" />
+</p>
+
+4 -> Selecionar a opção **"Azure Digital Twins Data Owner"** e clicar em **"Next"**.
+
+<p align="center">
+<img width="874" height="618" alt="image" src="https://github.com/user-attachments/assets/9abd7ff1-95bc-43df-aa87-e5f25312b7e9" />
+</p>
+
+5 -> Selecione em **"Assign access to"** a opção **"Managed identity"**.
+
+<p align="center">
+<img width="608" height="487" alt="image" src="https://github.com/user-attachments/assets/0db7e8cc-e49c-401a-9dc1-284b99cfa1f1" />
+</p>
+
+Clique em **"Select members"** e aparecerá uma janela pop-up à direita.
+
+6 -> Na janela pop-up, selecione em **"Managed identity"** e escolha a opção **"Function App"**. No **"Select"**, escolha a função criada e clique em **"Select"**.
+
+<p align="center">
+<img width="567" height="416" alt="image" src="https://github.com/user-attachments/assets/c883340e-4d30-4132-8fdd-77df7f9602b7" />
+</p>
+
+7 -> Vá a **Function App**
+
+
+-----
 Abra o projeto no VS Code.
 Caso tenha no projeto as seguintes pastas, apague-as uma vez que nos passos seguintes, irá gerar estas pastas novamente:
 
