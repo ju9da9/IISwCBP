@@ -48,6 +48,10 @@ O próximo passp passa em ativar o OPC UA Server no autómato. Por isso vá nas 
 > Encontra-se em Device Configration -> Propriedades do Autómato -> OPC UA -> Server -> Server Address
 >
 > <img width="1000" height="274" alt="image" src="https://github.com/user-attachments/assets/6f6f0794-88b8-41f3-aaf9-a96c28e8c969" />
+>
+> Estes serão utilizados para a configuração do server no software UA Expert
+
+
 
 
 
