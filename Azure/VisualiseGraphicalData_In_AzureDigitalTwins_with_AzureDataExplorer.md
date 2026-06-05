@@ -1,6 +1,6 @@
 #  How to visualise graphical data in Azure Digital Twins with Azure Data Explorer
 
-Antes de configurar a instância ADT, deve-se criar um event hub.
+Antes de configurar a instância ADT, deve-se criar um event hub **(Explicar porquê)**
 
 <p align="center">
 <img width="1543" height="911" alt="image" src="https://github.com/user-attachments/assets/b4c42ef8-ea18-49fa-9a84-1076647964f3" />
