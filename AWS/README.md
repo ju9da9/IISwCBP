@@ -10,3 +10,9 @@ Explicar policies, rules, IAM
 <img width="1325" height="583" alt="EsquemaDe_Ligacao_AWS" src="https://github.com/user-attachments/assets/ad3619a1-9bed-4d7d-994e-b333383c625c" />
 
 
+Mostrar por ordem de procedimentos os ficheiro/tutoriais/manuais markdown, para que o utilizador possa replicar os passsos
+
+1. csdv
+2. cdscsdcd
+3. cdsc
+4. csdc
