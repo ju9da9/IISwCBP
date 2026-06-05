@@ -2,6 +2,9 @@
 
 A Microsoft Azure é....
 
+Explicar o esquema de ligação desde o Node-RED até ào Azure Data Explorer indicando:
+  - o que é cada componente do esquema de arquitetura
+
 <img width="1126" height="281" alt="EsquemaDe_Ligacao_Azure" src="https://github.com/user-attachments/assets/4834d94a-0739-4d88-a465-718216623c67" />
 
 
