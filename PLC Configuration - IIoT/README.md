@@ -19,42 +19,71 @@ Para fazer a configuração do IOT2050 pode seguir os tutoriais da página [Git 
 No TIA Portal, crie uma Global DB, selecionando a opção **“Add new block”**.
 Vá às propriedades da DB criada, clicar na janela “attributes” e **desativar** a opção **“Optimized block access”**.
 
-
+<p align="center">
 <img width="1830" height="829" alt="image" src="https://github.com/user-attachments/assets/7ff61382-4702-4eeb-95dd-8a476420ae62" />
-
+</p>
 
 Crie as variáveis que serão enviadas para a Cloud na DB criada.
 
 > NOTA: Crie nomes sugestivos e que sejam os mesmos nomes que serão colocados na Cloud, para além de manter tipo de variável.
 
+<p align="center">
 <img width="1006" height="449" alt="image" src="https://github.com/user-attachments/assets/02d09960-dc6e-4969-ba5a-661864dceb63" />
+</p>
+
 
 Implemente as alterações que forem necessárias no programa TIA Portal, de maneira a que se consiga transferir os valores do programa para a database e em seguida para o Node-RED.
 
+<p align="center">
 <img width="1268" height="551" alt="image" src="https://github.com/user-attachments/assets/9b1352bf-377f-4e9b-96df-8ba80a16c462" />
+</p>
 
-O próximo passp passa em ativar o OPC UA Server no autómato. Por isso vá nas propriedades gerais do autómato em “Device Configuration" e entre na Janela OPC-UA Server, clicando em **Activate OPC-UA Server**,
+O próximo passos passa em ativar o OPC UA Server no autómato. Por isso vá nas propriedades gerais do autómato em “Device Configuration" e entre na Janela OPC-UA Server, clicando em **Activate OPC-UA Server**,
 
+<p align="center">
 <img width="1114" height="596" alt="image" src="https://github.com/user-attachments/assets/364f465e-6e94-457e-8e7e-dda915dd1c47" />
+</p>
+
 
 > NOTA: Deve fixar os seguintes nomes após a ativação do servidor:
 > 
 > 1. **OPC-UA Application name**
 >    
 > Encontra-se em “Device Configuration” -> Propriedades do autómato -> OPC UA -> General
-> 
-> <img width="828" height="165" alt="image" src="https://github.com/user-attachments/assets/f7909c56-457d-409d-bdd4-fbc8c78a4946" />
 >
+> <p align="center">
+> <img width="828" height="165" alt="image" src="https://github.com/user-attachments/assets/f7909c56-457d-409d-bdd4-fbc8c78a4946" />
+> </p>
+> 
 > 2. **Server Address**
 > 
 > Encontra-se em Device Configration -> Propriedades do Autómato -> OPC UA -> Server -> Server Address
 >
+> <p align="center">
 > <img width="1000" height="274" alt="image" src="https://github.com/user-attachments/assets/6f6f0794-88b8-41f3-aaf9-a96c28e8c969" />
->
+> </p>
+> 
 > Estes serão utilizados para a configuração do server no software UA Expert
 
 
+O passo seguinte passa por configurar as propriedades do OPC-UA ao ativar ou verificar se estão ligados os seguintes parâmetros:
+	- “Enable guest authentication” (Isto permitirá aceder ao OPC UA Server sem o uso de username e password);
 
+  <p align="center">
+  <img width="1096" height="294" alt="image" src="https://github.com/user-attachments/assets/9ed203d2-66c1-45b2-a847-67024e0609be" />
+  </p>
+
+  - Nas “Security policies available on the server” a opção “No security”;
+
+  <p align="center">
+  <img width="1453" height="387" alt="image" src="https://github.com/user-attachments/assets/34a7b079-ed84-4a81-a4dd-94d62293ff22" />
+  </p>
+
+  - Nas propriedades gerais do autómato selecione a licença do OPC-UA requrida e compilar
+
+  <p align="center">
+  <img width="1294" height="880" alt="image" src="https://github.com/user-attachments/assets/bf7ed43d-403d-40be-9c71-7339c301f59a" />
+  </p>
 
 
 
