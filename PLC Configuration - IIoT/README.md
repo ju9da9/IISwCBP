@@ -86,9 +86,86 @@ O passo seguinte passa por configurar as propriedades do OPC-UA ao ativar ou ver
   </p>
 
 
+Neste momento, o autómato já tem as condições reunidas para adicionar um OPC UA Server. Na “project tree”, desloque à janela “OPC UA Communication” e clique em “Add new server interface”;
+Escreva um nome para o server e selecione “Interface” como seu tipo de server;
+Clique em “Ok”.
+
+<p align="center">
+<img width="1122" height="857" alt="image" src="https://github.com/user-attachments/assets/c742c191-c729-49db-a4ab-47033ea8253b" />
+</p>
+
+Irá aparecer duas janelas com o server e todas as variáveis e DBs existentes no programa. Selecione as variáveis quer enviar pelo protocolo e arraste-as para a janela do server.
+
+<p align="center">
+<img width="1317" height="687" alt="image" src="https://github.com/user-attachments/assets/5f11bd14-f0bb-4090-8ce4-f116c201fe83" />
+</p>
+
+A imagem abaixo o resultado
+
+<p align="center">
+<img width="792" height="248" alt="image" src="https://github.com/user-attachments/assets/46f7cc55-ec38-40bf-a03d-125ae838b5f7" />
+
+</p>
+
+Faça o download do programa <img width="94" height="92" alt="image" src="https://github.com/user-attachments/assets/8e63463a-fcb9-4e0e-ad0e-fbc9221e4f8d" />
+
+
+No Software UA Expert, clique em <img width="119" height="120" alt="image" src="https://github.com/user-attachments/assets/124cf71c-e7e4-4613-ba32-367780c0fedb" />
+
+<p align="center">
+<img width="1132" height="902" alt="image" src="https://github.com/user-attachments/assets/94cc6d13-70a1-4ac7-a907-088fe95410f6" />
+</p>
+
+
+Ao clicar, Irá aparecer a seguinte Imagem abaixo. Clique em “Double click to Add Server”. Irá ser pedido um URL que de facto, é o endereço do Server **(Server address mencionado anteriormente)**.
+
+<p align="center">
+<img width="1133" height="905" alt="image" src="https://github.com/user-attachments/assets/b2ae6022-a7e5-41f5-bda5-cf1514f6ba03" />
+</p>
+
+De seguida, deve verificar se o nome que está debaixo do server address corresponde ao OPC UA Application name.
+
+<p align="center">
+<img width="1028" height="719" alt="image" src="https://github.com/user-attachments/assets/462876a2-a596-460b-a9c3-aea50f361ed5" />
+</p>
+
+Na janela project, clique com o botão direito do rato em cima do server criado e clique em “Connect”.
+
+Confirme se o nome que aparece em “Certificate Chain” corresponde ao mesmo nome do “Server Certificate” no TIA Portal”
+Como o server criado não tem um “nível” de segurança definido, aparece como “Untrusted”.
+No entanto clique em “Trust Server Certificate”, e de seguida clique em “Continue”
+
+<p align="center">
+<img width="1491" height="805" alt="image" src="https://github.com/user-attachments/assets/1560fe2c-cbb0-48cd-b06d-2f34344e7d49" />
+</p>
 
 
 
+O próximo passo passa por Configurar o UA Expert para visualizar os valores das variáveis no servidor. Para isso, arraste todas as variáveis que estão no “Server interfaces” para a Janela “Data acess view” (ou apenas as variáveis que deseja).
+
+<p align="center">
+<img width="1092" height="712" alt="image" src="https://github.com/user-attachments/assets/3c1e3a8e-4627-4c24-a8e1-6887b2361c4b" />
+</p>
+
+É possível verificar se o servidor está funcional ou não. Para isso, precisa de ir ao TIA Portal.
+Clique em “Go Online”, vá à DB onde se encontram as variáveis que vão ser enviadas para a cloud e modifique o valor atual de uma das variáveis.
+
+<p align="center">
+<img width="944" height="596" alt="image" src="https://github.com/user-attachments/assets/c40ffa16-0ad5-411b-9b0a-1e6fec4c7a11" />
+</p>
+
+Se os valores atuais aparecerem no UA Expert, significa que o servidor se encontra funcional.
+
+<p align="center">
+<img width="772" height="241" alt="image" src="https://github.com/user-attachments/assets/914fc49f-719b-4927-816e-5ce8f0eae6d2" />
+</p>
 
 
+
+Na janela “ Data Access View”, existe um separador que permite identificar as variáveis no Node-RED, o “Node Id”.
+A declaração das variáveis no Node-RED é feita pela seguinte maneira:
+
+<p align="center">
+<img width="1692" height="499" alt="image" src="https://github.com/user-attachments/assets/e719900c-4f04-47ad-ac33-1c456d146307" />
+</p>
 
