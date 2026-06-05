@@ -39,13 +39,13 @@ O próximo passp passa em ativar o OPC UA Server no autómato. Por isso vá nas 
 
 > NOTA: Deve fixar os seguintes nomes após a ativação do servidor:
 > 
-> 1. OPC-UA Application name
+> 1. **OPC-UA Application name**
 >    
-> Encontra-se em “Device Configuration” -> Propriedades do autómato -> OPC UA  General
+> Encontra-se em “Device Configuration” -> Propriedades do autómato -> OPC UA -> General
 > 
 > <img width="828" height="165" alt="image" src="https://github.com/user-attachments/assets/f7909c56-457d-409d-bdd4-fbc8c78a4946" />
 >
-> 2. Server Address
+> 2. **Server Address**
 > 
 > Encontra-se em Device Configration -> Propriedades do Autómato -> OPC UA -> Server -> Server Address
 >
