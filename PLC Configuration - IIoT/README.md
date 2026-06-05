@@ -7,4 +7,4 @@ Explicar que o programa TIA Portal está configurado para conectar o S7-1500 com
 Falar como configurar o OPC UA Server no tia portal
 
 
-Para fazer a configuração do IOT2050 pode seguir os tutoriais da página [Git Hub da Siemens](https://github.com/SIMATICmeetsLinux/IOT2050-Setting-Up-Example-Image), onde explica com detalhe todos os passos necessários para o foncionamento do IIoT Gateway
+Para fazer a configuração do IOT2050 pode seguir os tutoriais da página [Git Hub da Siemens](https://github.com/SIMATICmeetsLinux/IOT2050-Setting-Up-Example-Image), onde explica com detalhe todos os passos necessários para o funcionamento do IIoT Gateway. Caso seja mais prático, pode utilizar o [PDF]() da Siemens com os mesmos tutoriais guardado no repositório.
