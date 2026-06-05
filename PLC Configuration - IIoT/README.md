@@ -65,7 +65,6 @@ O próximo passos passa em ativar o OPC UA Server no autómato. Por isso vá nas
 > 
 > Estes serão utilizados para a configuração do server no software UA Expert
 
-
 O passo seguinte passa por configurar as propriedades do OPC-UA ao ativar ou verificar se estão ligados os seguintes parâmetros:
 	- “Enable guest authentication” (Isto permitirá aceder ao OPC UA Server sem o uso de username e password);
 
@@ -85,7 +84,6 @@ O passo seguinte passa por configurar as propriedades do OPC-UA ao ativar ou ver
   <img width="1294" height="880" alt="image" src="https://github.com/user-attachments/assets/bf7ed43d-403d-40be-9c71-7339c301f59a" />
   </p>
 
-
 Neste momento, o autómato já tem as condições reunidas para adicionar um OPC UA Server. Na “project tree”, desloque à janela “OPC UA Communication” e clique em “Add new server interface”;
 Escreva um nome para o server e selecione “Interface” como seu tipo de server;
 Clique em “Ok”.
@@ -104,18 +102,15 @@ A imagem abaixo o resultado
 
 <p align="center">
 <img width="792" height="248" alt="image" src="https://github.com/user-attachments/assets/46f7cc55-ec38-40bf-a03d-125ae838b5f7" />
-
 </p>
 
 Faça o download do programa <img width="94" height="92" alt="image" src="https://github.com/user-attachments/assets/8e63463a-fcb9-4e0e-ad0e-fbc9221e4f8d" />
-
 
 No Software UA Expert, clique em <img width="119" height="120" alt="image" src="https://github.com/user-attachments/assets/124cf71c-e7e4-4613-ba32-367780c0fedb" />
 
 <p align="center">
 <img width="1132" height="902" alt="image" src="https://github.com/user-attachments/assets/94cc6d13-70a1-4ac7-a907-088fe95410f6" />
 </p>
-
 
 Ao clicar, Irá aparecer a seguinte Imagem abaixo. Clique em “Double click to Add Server”. Irá ser pedido um URL que de facto, é o endereço do Server **(Server address mencionado anteriormente)**.
 
@@ -139,8 +134,6 @@ No entanto clique em “Trust Server Certificate”, e de seguida clique em “C
 <img width="1491" height="805" alt="image" src="https://github.com/user-attachments/assets/1560fe2c-cbb0-48cd-b06d-2f34344e7d49" />
 </p>
 
-
-
 O próximo passo passa por Configurar o UA Expert para visualizar os valores das variáveis no servidor. Para isso, arraste todas as variáveis que estão no “Server interfaces” para a Janela “Data acess view” (ou apenas as variáveis que deseja).
 
 <p align="center">
@@ -160,12 +153,50 @@ Se os valores atuais aparecerem no UA Expert, significa que o servidor se encont
 <img width="772" height="241" alt="image" src="https://github.com/user-attachments/assets/914fc49f-719b-4927-816e-5ce8f0eae6d2" />
 </p>
 
-
-
 Na janela “ Data Access View”, existe um separador que permite identificar as variáveis no Node-RED, o “Node Id”.
 A declaração das variáveis no Node-RED é feita pela seguinte maneira:
 
 <p align="center">
 <img width="1692" height="499" alt="image" src="https://github.com/user-attachments/assets/e719900c-4f04-47ad-ac33-1c456d146307" />
 </p>
+
+No Node-RED para poder receber vários dados de uma vez só numa função pode ser usado um esquema similar à imagem de baixo, onde iremos falar por parte como configurar até à função.
+
+<p align="center">
+<img width="1568" height="495" alt="image" src="https://github.com/user-attachments/assets/9a39f479-ce54-41c0-88f7-aebc491fce07" />
+</p>
+
+O node “Inject serve para dar o pulso para que as variáveis sejam enviadas para a cloud. É possivel injetar as variáveis várias vezes, usando intervalos de tempo nas propriedades do node.
+
+
+<img width="1690" height="642" alt="image" src="https://github.com/user-attachments/assets/7d5a8eb9-8e88-4509-be88-6ac28923f1d2" />
+
+O node “OpcUa-Item” serve para identificar a variável que deseja ler (read), escrever (write) ou outra função que esteja disponível através do node “OpcUa- Client”. Tal como visto anteriormente, a declaração das variáveis (ou items) é feita da seguinte maneira no Node-RED:
+
+<img width="1605" height="819" alt="image" src="https://github.com/user-attachments/assets/bc681547-5ea0-47be-9562-9a985fa99f82" />
+
+Clique em " Done apoós realizar a declaração.
+
+O node "Opc-Ua Client" tem múltiplas funções como ler, escrever e entre outras. Como neste caso pretende-se ler os dados para serem enviados para a cloud, a sua configuração tem de ser realizada da seguinte forma:
+
+<img width="1789" height="617" alt="image" src="https://github.com/user-attachments/assets/6a81386e-e532-4607-a944-8e4d5e053d84" />
+
+No Parâmetro “EndPoint” cole ou escreva o server Address utilizado em passos anteriores para aceder ao Server.
+Escolha a opção “None” nos parâmetros “SecurityPolicy” 3 SecurityMode”.
+Selecione a opção “Anonymous” e clique em upgrade.
+
+<img width="1215" height="796" alt="image" src="https://github.com/user-attachments/assets/cc69a091-d863-4e61-bef5-d94eb5a1029b" />
+
+Como os valores das variáveis aparecem em mensagens separadas no debug (dificultuando a obtenção dos mesmos para a colocação dos dados no formato Mindsphere) foi utilizado o node “Join” para juntar os valores  em forma de array. A imagem segunte mostra como deve ser feita a configuração.
+
+<img width="1346" height="783" alt="image" src="https://github.com/user-attachments/assets/ffa5654d-2833-4f6d-ba97-4d421aea0c1c" />
+
+Crie uma função com um modelo de registo de dados em tempo real, onde no qual terá de chamar a variáveis do OPC UA Server da seguinte forma:
+
+<img width="572" height="184" alt="image" src="https://github.com/user-attachments/assets/41119d96-39df-4305-85a5-dc8b126e2e61" />
+
+O resto da função dependerá como devem ser enviados os dados em cada cloud. Vá às pastas dedicadas às clouds para ver como são enviados os dados do Node-RED.
+
+
+
 
