@@ -1,6 +1,6 @@
 # IISwCBP
 
-This repository is dedicated for the development of the MSc. Dissertation named "Integrating Industrial Systems with Cloud-based Platforms for Enhanced Connectivity and Efficiency" made by the Polytechnic University of Leiria's student Judá Imbó during 2024 and 2025.
+This repository is dedicated for the development of the MSc. Dissertation named "Integrating Industrial Systems with Cloud-based Platforms for Enhanced Connectivity and Efficiency" made by the Polytechnic University of Leiria's student Judá Imbó during 2024 and 2026.
 
 It contains a set of manuals/tutorials that allows to connect Programmable Logic Controllers (PLC) with cloud platforms such as AWS, Microsoft Azure and Siemens Insights Hub, as some of the code used in this dissertation.
 
