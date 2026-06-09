@@ -6,9 +6,9 @@ O primeiro passo para começar a criar soluções no Insights Hub é modelar cor
 Para isso, a ordem recomendada é a seguinte:
 
 1. [Criar **Aspects**](#1-criar-um-aspect)
-2. [Criar **Types**](2-criar-um-type)
+2. [Criar **Types**](#2-criar-um-type)
 3. [Criar **Assets**](#3-criar-um-asset)
-4. [Processo de **Onboarding**]()
+4. [Processo de **Onboarding**](#processo-de-onboarding)
 
 Essa sequência ajuda a estruturar a informação de forma consistente e facilita a reutilização do modelo em diferentes equipamentos ou máquinas.
 
