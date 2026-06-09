@@ -2,14 +2,16 @@
 
 - dizer o que é
 
-O primeiro passo para começar a criar soluções no Insights Hub é modelar corretamente os seus dados e ativos.  
+O primeiro passo para começar a criar soluções no Insights Hub é modelar corretamente os seus dados através de Aspects Types e Assets. Após a criação destes, será possível fazer o processo de onboarding, que consiste no
 Para isso, a ordem recomendada é a seguinte:
 
 1. [Criar **Aspects**]()
 2. [Criar **Types**]()
 3. [Criar **Assets**]()
+4. [Processo de **Onboarding**]()
 
 Essa sequência ajuda a estruturar a informação de forma consistente e facilita a reutilização do modelo em diferentes equipamentos ou máquinas.
+
 
 Os **Aspects** são a representação digital das variáveis de um equipamento e um mecanismo de modelação de dados para assets. Eles agrupam datapoints relacionados com base na sua associação lógica e podem consistir em várias variáveis.
 Em termos práticos, um Aspect define quais dados um asset pode expor, como medições, estados ou sinais de operação.
@@ -20,9 +22,13 @@ Um **Asset** é a representação digital de uma combinação de equipamentos ou
 O Asset é o objeto final que representa o ativo real no sistema, permitindo monitorização, organização e utilização dos dados provenientes dos dispositivos ligados.
 
 
----
+<img width="1920" height="1080" alt="Aspects_Types_Assets" src="https://github.com/user-attachments/assets/afa01656-550d-49fc-b6fd-fb22f42e9eca" />
 
-# 1. Criar um Aspect
+
+---
+# Criação de Aspects, Types e Assets
+
+## 1. Criar um Aspect
 
 
 No **Asset Manager**, e clique em **View your aspects**.
@@ -43,6 +49,7 @@ Em seguida, abra a janela **Variables** e clique em **Add Variable**.
 
 Adicione as variáveis necessárias que representam este aspect e no final, clique em **Save** para guardar o Aspect.
 
+
 <img width="1309" height="540" alt="image" src="https://github.com/user-attachments/assets/43225fad-d368-4cc6-91a2-46d4c03ec888" />
 
 
@@ -52,7 +59,7 @@ Adicione as variáveis necessárias que representam este aspect e no final, cliq
 ---
 
 
-# 2. Criar um Type
+## 2. Criar um Type
 
 No **Asset Manager**, clique em **View your types**
 
@@ -83,7 +90,7 @@ Após já ter adicionado todos os aspects necessários, clique em **Save**.
 
 ---
 
-# 3. Criar um Asset
+## 3. Criar um Asset
 
 No **Asset Manager**, clique em **View your assets**.
 
@@ -106,4 +113,7 @@ No final, clique em **Save**
 <img width="1840" height="881" alt="image" src="https://github.com/user-attachments/assets/964d90fb-a097-4002-a273-7c5ceabaf7f6" />
 
 
+
 ---
+
+# Processo de Onboarding
