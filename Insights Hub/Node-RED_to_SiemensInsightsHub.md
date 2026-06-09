@@ -5,7 +5,7 @@
 O primeiro passo para começar a criar soluções no Insights Hub é modelar corretamente os seus dados através de Aspects Types e Assets. Após a criação destes, será possível fazer o processo de onboarding, que consiste no
 Para isso, a ordem recomendada é a seguinte:
 
-1. [Criar **Aspects**]()
+1. [Criar **Aspects**](#1-criar-um-aspect)
 2. [Criar **Types**]()
 3. [Criar **Assets**]()
 4. [Processo de **Onboarding**]()
