@@ -5,9 +5,9 @@
 O primeiro passo para começar a criar soluções no Insights Hub é modelar corretamente os seus dados e ativos.  
 Para isso, a ordem recomendada é a seguinte:
 
-1. Criar **Aspects**
-2. Criar **Types**
-3. Criar **Assets**
+1. [Criar **Aspects**]()
+2. [Criar **Types**]()
+3. [Criar **Assets**]()
 
 Essa sequência ajuda a estruturar a informação de forma consistente e facilita a reutilização do modelo em diferentes equipamentos ou máquinas.
 
@@ -66,7 +66,7 @@ Dentro da página dos Types procure por **Basic Agent** e clique na seta desta o
 
 Preencha:
 
-- Nome
+- Name
 - Description (Insira uma breve descrição do equipamento ou processo.
 - Adicione uma imagem para fácil identificação do type
   
@@ -85,8 +85,6 @@ Após já ter adicionado todos os aspects necessários, clique em **Save**.
 
 # 3. Criar um Asset
 
-## Passo 1 – Abrir a área de Assets
-
 No **Asset Manager**, clique em **View your assets**.
 
 <img width="1115" height="760" alt="image" src="https://github.com/user-attachments/assets/6d04112d-ac1e-4a47-a0b9-1f587d26c82e" />
@@ -95,53 +93,17 @@ Clique em **Create Asset**
 
 Preencha os seguintes campos:
 
-- Nome
-- Description 
+- Name
+- Description
+- Asset type (Associe o Type criado anteriormente (neste caso, é `Machine_type`)
+- Location (Alternativo)
+- Image (Alternativo - para uma fácil identificação do type)
 
-### Descrição
+<img width="813" height="539" alt="image" src="https://github.com/user-attachments/assets/e15a0f5a-3cd3-4403-84b3-a80c6339e7b5" />
 
-Insira uma breve descrição do Asset.
+No final, clique em **Save**
 
-### Type
+<img width="1840" height="881" alt="image" src="https://github.com/user-attachments/assets/964d90fb-a097-4002-a273-7c5ceabaf7f6" />
 
-Selecione o Type criado anteriormente:
-
-```text
-Eolica
-```
-
-Depois avance para o passo seguinte.
-
-## Imagem do Slide 20
-
-> Inserir aqui a imagem do Slide 20
-
-![Slide 20](images/slide20.png)
-
----
-
-## Passo 3 – Configurar a localização e imagem
-
-Preencha:
-
-- País
-- Cidade
-- Morada
-- Coordenadas geográficas (opcional)
-
-Adicione uma imagem representativa do equipamento através dos botões:
-
-- Choose
-- Browse
-
-Após concluir:
-
-Clique em **Save**
-
-## Imagem do Slide 21
-
-> Inserir aqui a imagem do Slide 21
-
-![Slide 21](images/slide21.png)
 
 ---
