@@ -87,31 +87,16 @@ Após já ter adicionado todos os aspects necessários, clique em **Save**.
 
 ## Passo 1 – Abrir a área de Assets
 
-No **Asset Manager**, selecione:
+No **Asset Manager**, clique em **View your assets**.
 
-**View your assets**
+<img width="1115" height="760" alt="image" src="https://github.com/user-attachments/assets/6d04112d-ac1e-4a47-a0b9-1f587d26c82e" />
 
-## Imagem do Slide 19
-
-> Inserir aqui a imagem do Slide 19
-
-![Slide 19](images/slide19.png)
-
----
-
-## Passo 2 – Criar o Asset
-
-Clique em:
-
-**Create Asset**
+Clique em **Create Asset**
 
 Preencha os seguintes campos:
 
-### Nome
-
-```text
-Wind_Turbine_Digital_Twin
-```
+- Nome
+- Description 
 
 ### Descrição
 
