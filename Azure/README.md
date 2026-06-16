@@ -18,7 +18,6 @@ Depois, os dados seguem para o Event Hub, que funciona como transportador de eve
 
 Mostrar por ordem de procedimentos os ficheiro/tutoriais/manuais markdown, para que o utilizador possa replicar os passsos
 
-1. csdv
-2. cdscsdcd
-3. cdsc
-4. csdc
+1. [Node-RED to Azure IoT Hub]
+2. [Azure IoT Hub to Azure Digital Twins]
+3. [How to visualise historical data in Azure Digital Twins with Azure Data Explorer]
