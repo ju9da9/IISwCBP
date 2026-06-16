@@ -15,7 +15,7 @@ Explicar o esquema de ligação desde o Node-RED até ào Grafana indicando:
 
 Faça a configuração desta arquitetura na seguinte ordem:
 
-1. csdv
-2. cdscsdcd
-3. cdsc
-4. csdc
+1. [Node-RED to AWS IoT Core]
+2. [AWS IoT Core to AWS IoT SiteWise]
+3. [AWS IoT SiteWise to Grafana]
+
