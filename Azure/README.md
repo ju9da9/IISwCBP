@@ -1,7 +1,5 @@
 # Microsoft Azure README
 
-A Microsoft Azure é....
-
 Neste esquema abaixo, os dispositivos enviam a informação (telemetria) para o Azure IoT Hub, normalmente por MQTT com SAS Token ou através de um node do Azure IoT Hub no Node-RED. 
 
 O Azure IoT Hub recebe esses dados e publica eventos no Event Grid, que serve para disparar notificações quando há nova informação. 
