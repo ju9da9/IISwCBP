@@ -15,9 +15,8 @@ Depois, os dados seguem para o Event Hub, que funciona como transportador de eve
 <img width="1126" height="281" alt="EsquemaDe_Ligacao_Azure" src="https://github.com/user-attachments/assets/4834d94a-0739-4d88-a465-718216623c67" />
 
 
-
-Mostrar por ordem de procedimentos os ficheiro/tutoriais/manuais markdown, para que o utilizador possa replicar os passsos
+Faça a configuração desta arquitetura na seguinte ordem:
 
 1. [Node-RED to Azure IoT Hub](https://github.com/ju9da9/IISwCBP/blob/main/Azure/NodeRED_AzureIoTHub.md)
 2. [Azure IoT Hub to Azure Digital Twins](https://github.com/ju9da9/IISwCBP/blob/main/Azure/AzureIoTHub_to_AzureDigitalTwins.md)
-3. [How to visualise historical data in Azure Digital Twins with Azure Data Explorer](https://github.com/ju9da9/IISwCBP/blob/main/Azure/AzureIoTHub_to_AzureDigitalTwins.md)
+3. [How to visualise historical data in Azure Digital Twins with Azure Data Explorer](https://github.com/ju9da9/IISwCBP/blob/main/Azure/VisualiseGraphicalData_In_AzureDigitalTwins_with_AzureDataExplorer.md)
