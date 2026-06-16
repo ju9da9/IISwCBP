@@ -2,8 +2,7 @@
 
 Antes de configurar a instância ADT, deve-se criar um event hub **(Explicar porquê)**
 
-Vá a página da Envent Hubs na Azure portal e crie um Event Hub namespace **(explicar o que é)**
-
+Vá a página da Event Hubs na Azure portal e crie um Event Hub namespace 
 <p align="center">
 <img width="1543" height="911" alt="image" src="https://github.com/user-attachments/assets/b4c42ef8-ea18-49fa-9a84-1076647964f3" />
 </p>
