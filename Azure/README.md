@@ -18,6 +18,6 @@ Depois, os dados seguem para o Event Hub, que funciona como transportador de eve
 
 Mostrar por ordem de procedimentos os ficheiro/tutoriais/manuais markdown, para que o utilizador possa replicar os passsos
 
-1. [Node-RED to Azure IoT Hub](https://github.com/ju9da9/IISwCBP/blob/main/Azure/AzureIoTHub_to_AzureDigitalTwins.md)
+1. [Node-RED to Azure IoT Hub](https://github.com/ju9da9/IISwCBP/blob/main/Azure/NodeRED_AzureIoTHub.md)
 2. [Azure IoT Hub to Azure Digital Twins](https://github.com/ju9da9/IISwCBP/blob/main/Azure/AzureIoTHub_to_AzureDigitalTwins.md)
 3. [How to visualise historical data in Azure Digital Twins with Azure Data Explorer](https://github.com/ju9da9/IISwCBP/blob/main/Azure/AzureIoTHub_to_AzureDigitalTwins.md)
