@@ -13,7 +13,7 @@ Explicar o esquema de ligação desde o Node-RED até ào Grafana indicando:
 
 
 
-Mostrar por ordem de procedimentos os ficheiro/tutoriais/manuais markdown, para que o utilizador possa replicar os passsos
+Faça a configuração desta arquitetura na seguinte ordem:
 
 1. csdv
 2. cdscsdcd
