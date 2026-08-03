@@ -1,5 +1,22 @@
 # Ligação Node-RED -> Azure IoT Hub
 
+## English Version
+
+This guide shows how to connect **Node-RED** to **Azure IoT Hub**.
+
+### Main flow
+1. Create and configure an Azure IoT Hub and register a device.
+2. Choose one connection method in Node-RED:
+   - **Azure IoT Hub node** (`node-red-contrib-azure-iot-hub`), or
+   - **MQTT Out node** with SAS token authentication.
+3. Build and deploy a payload function flow.
+4. Validate telemetry with `az iot hub monitor-events` in Azure Cloud Shell.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 
 O primeiro passo desta ligação passa pela criação e configuração da Azure IoT Hub. 
 

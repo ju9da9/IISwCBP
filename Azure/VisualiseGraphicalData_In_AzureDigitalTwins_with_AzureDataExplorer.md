@@ -1,5 +1,22 @@
 #  How to visualise historical data in Azure Digital Twins with Azure Data Explorer
 
+## English Version
+
+This guide explains how to visualize historical data from **Azure Digital Twins** using **Azure Data Explorer**.
+
+### Main flow
+1. Create an **Event Hubs namespace** and **Event Hub**.
+2. Create an **Azure Data Explorer cluster** and **database**.
+3. In Azure Digital Twins, create a **Data History** connection.
+4. Configure authentication, send/store targets, and table names.
+5. Grant required permissions for Event Hub and Data Explorer.
+6. Validate data history and view charts/tables in Azure tools.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 Vá a página da Event Hubs na Azure portal e crie um Event Hub namespace 
 <p align="center">
 <img width="1543" height="911" alt="image" src="https://github.com/user-attachments/assets/b4c42ef8-ea18-49fa-9a84-1076647964f3" />
@@ -145,5 +162,4 @@ Clique no botão (já ativada) da data history da Azure Digital Twins, Onde pode
 <p align="center">
 <img width="932" height="628" alt="image" src="https://github.com/user-attachments/assets/938b8903-e862-49bf-a334-4513581c5a1d" />
 </p>
-
 

@@ -1,5 +1,31 @@
 # Ligação Node-RED <-> AWS IoT Core
 
+## English Version
+
+This guide shows how to connect **Node-RED** to **AWS IoT Core**.
+
+### 1. AWS IoT Core setup
+- Open AWS and go to **IoT Core**.
+- Create a **Thing** (single thing).
+- Generate a new certificate.
+- Create and attach a policy with: `iot:Connect`, `iot:Publish`, `iot:Subscribe`, and `iot:Receive`.
+- Download certificates and save the IoT Core **Domain name / endpoint**.
+
+### 2. Node-RED setup
+- Add an **MQTT out** node.
+- Use the AWS IoT endpoint and port `8883`.
+- Enable TLS and add the generated certificates.
+- Set your topic (for example `AWS/Counters`).
+- Build the payload flow (for example with `join` + `function`) and deploy.
+
+### 3. Validate payload in AWS
+- In AWS IoT Core, open **MQTT test client**.
+- Subscribe to your topic.
+- Confirm incoming payload messages.
+
+---
+
+
 (Escrever uma introdução inicial)
 
 ## 1. Configuração da AWS IoT Core
@@ -143,5 +169,4 @@ Irá aparecer uma janela em baixo do *Topic filter* com o conteúdo existente de
 <p align="center">
 <img width="605" height="607" alt="image" src="https://github.com/user-attachments/assets/a56f7f98-9dd1-48dc-874f-c0ecf954f5d3" />
 </p>
-
 

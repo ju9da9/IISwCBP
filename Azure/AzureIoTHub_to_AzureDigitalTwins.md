@@ -1,5 +1,22 @@
 # Azure IoT Hub -> Azure Digital Twins
 
+## English Version
+
+This guide explains how to ingest data from **Azure IoT Hub** into **Azure Digital Twins** using **Azure Functions**.
+
+### Main flow
+1. Create a **Function App** (Consumption plan, .NET isolated worker).
+2. Configure Storage and Application Insights.
+3. Set required app settings (for example `ADT_SERVICE_URL`).
+4. Enable managed identity for the Function App.
+5. Grant required RBAC permissions in Azure Digital Twins.
+6. Publish the Azure Function package from VS Code/CLI.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 Para poder enviar dados para a Azure Digital twins a partir da Azure IoT é preciso uma série de passos para poder até lá.
 
 

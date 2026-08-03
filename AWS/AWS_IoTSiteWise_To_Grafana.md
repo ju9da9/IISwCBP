@@ -1,5 +1,22 @@
 # AWS IoT SiteWise <-> Grafana (Local)
 
+## English Version
+
+This guide explains how to visualize **AWS IoT SiteWise** data in **Grafana**.
+
+### Main flow
+1. Create a Grafana account and add the **AWS IoT SiteWise** data source.
+2. In AWS IAM, create a user/policy with SiteWise read permissions (`Describe*`, `Get*`, `List*`, and batch property reads).
+3. Generate and save AWS access keys.
+4. Configure keys (and optionally endpoint/region) in Grafana.
+5. Build dashboards and panels from SiteWise assets/properties.
+6. (Optional) Add transformations to support alert rules.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 
 
 O objetivo desta fase é o acesso aos dados do AWS IoT Sitewise a partir da Grafana, uma plataforma de visualização de dados a partir de dashboards. Para isso, será necessário criar uma nova data source na grafana para poder ter acesso aos dados da AWS.
@@ -202,7 +219,6 @@ fghjkljhgfhjk
 </p>
 
 Existem inúmeros tipos de visualização no grafana para poder criar uma dashboard. O template do caso utilizado está na pasta [AWS/Backup Dashboard grafana AWS](https://github.com/ju9da9/IISwCBP/tree/main/AWS/Backup%20Dashboard%20grafana%20AWS).
-
 
 
 

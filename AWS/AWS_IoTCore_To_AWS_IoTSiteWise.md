@@ -1,5 +1,21 @@
 # AWS IoT Core -> AWS IoT SiteWise
 
+## English Version
+
+This guide explains how to route telemetry from **AWS IoT Core** to **AWS IoT SiteWise**.
+
+### Main flow
+1. Create SiteWise **asset models** and **assets**.
+2. Configure **property aliases** for each asset property.
+3. Create IoT Core **Rules** to map topic fields to SiteWise property aliases.
+4. Configure an **IAM role/policy** that allows writing property values (for example `iotsitewise:BatchPutAssetPropertyValue`).
+5. Associate assets in the factory hierarchy and validate data ingestion.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 A AWS IoT SiteWise é um serviço no qual permite a obtenção, o armazenamento, organização e monitorização de dados vindos de equipamentos industriais.
 Com este serviço é possível monitorizar várias operações nas várias instalações, criar métricas e indicadores de desempenho, realizar cálculos automáticos sobre os dados obtidos e
 
@@ -205,4 +221,3 @@ E assim temos a IAM role criada.
 </p>
 
 Volte de novo à página onde estava a criar a rule. Use o ícone <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> para atualizar a lista de roles e volte a inserir a role criada. De seguida Clique em "Next" e depois em "Create". Faça o mesmo com os restantes tópicos e assim poderá redirecionar os dados que estão na AWS IoT Core para a AWS IoT SiteWise.
-
