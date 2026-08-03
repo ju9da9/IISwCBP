@@ -2,17 +2,151 @@
 
 ## English Version
 
-This guide explains how to visualize historical data from **Azure Digital Twins** using **Azure Data Explorer**.
+Go to the **Event Hubs** page in the Azure portal and create an **Event Hubs namespace**.
+<p align="center">
+<img width="1543" height="911" alt="image" src="https://github.com/user-attachments/assets/b4c42ef8-ea18-49fa-9a84-1076647964f3" />
+</p>
 
-### Main flow
-1. Create an **Event Hubs namespace** and **Event Hub**.
-2. Create an **Azure Data Explorer cluster** and **database**.
-3. In Azure Digital Twins, create a **Data History** connection.
-4. Configure authentication, send/store targets, and table names.
-5. Grant required permissions for Event Hub and Data Explorer.
-6. Validate data history and view charts/tables in Azure tools.
+Then fill in the required fields as shown in the image below. If you already have a resource group, use that same group to create the namespace. Click **Review + Create**, and then click **Create**.
 
-> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+<p align="center">
+<img width="828" height="823" alt="image" src="https://github.com/user-attachments/assets/6808b70c-fca1-41c9-947e-73a931098841" />
+</p>
+
+When the next screen appears, you can confirm that the Event Hubs namespace has been created. Then click **Go to resource**.
+
+<p align="center">
+<img width="809" height="493" alt="image" src="https://github.com/user-attachments/assets/684a4295-2d5a-4a3d-bd34-b248c29e181a" />
+</p>
+
+On that page, click **+ Event Hub** to create an Event Hub.
+
+<p align="center">
+<img width="795" height="594" alt="image" src="https://github.com/user-attachments/assets/d5ab43b6-a9b2-4000-84e6-96b4ad9810fd" />
+</p>
+
+Fill in the following parameters and then click **Review + Create**.
+
+The **partition count** setting lets you parallelize consumption across multiple consumers. For more information, see *Partitions*.
+
+The **message retention** setting specifies how long the Event Hubs service keeps data. For more information, see *Event retention*.
+
+<p align="center">
+<img width="964" height="798" alt="image" src="https://github.com/user-attachments/assets/83f97f69-4a9f-48d1-8ba8-8dda10161b75" />
+</p>
+
+In **Review + Create**, click **Create**.
+
+You can verify that the Event Hub was created under **Entities** in the Event Hubs namespace, as shown below.
+
+<p align="center">
+<img width="1862" height="682" alt="image" src="https://github.com/user-attachments/assets/3476ca46-5dab-4056-9dcd-37fa5727682d" />
+</p>
+
+The next step is to create a free **Azure Data Explorer cluster** and **database**. To do this, sign in to Azure Data Explorer. After signing in, open the **My Cluster** tab in the side panel and click **Create cluster and database**.
+
+<p align="center">
+<img width="1624" height="866" alt="image" src="https://github.com/user-attachments/assets/9cd6efb6-630c-4576-b233-2d9c0aa4cf60" />
+</p>
+
+A pop-up window will appear. Fill in the following parameters and click **Create**.
+
+<p align="center">
+<img width="683" height="672" alt="image" src="https://github.com/user-attachments/assets/78842b71-5fc3-4f74-8f67-4b0981a60139" />
+</p>
+
+Still on the **My Cluster** page, create a database.
+
+<p align="center">
+<img width="1281" height="424" alt="image" src="https://github.com/user-attachments/assets/b74af661-3914-4fee-b6ab-0460f442672e" />
+</p>
+
+Enter a name for the database and click **Next: Create Database**.
+
+<p align="center">
+<img width="866" height="778" alt="image" src="https://github.com/user-attachments/assets/a8f469a1-e18e-4622-9179-acfea7796a9e" />
+
+Upgrade the cluster.
+
+<p align="center">
+<img width="672" height="837" alt="image" src="https://github.com/user-attachments/assets/fa63d5c2-aebd-4bf4-839a-3c6dfc81749b" />
+</p>
+
+<p align="center">
+<img width="503" height="177" alt="image" src="https://github.com/user-attachments/assets/c6248dbc-6649-4ed2-bdd4-642054a55978" />
+</p>
+
+------------------------
+
+In your Azure Digital Twins instance, go to **Connect Outputs --> Data History**. Then click **Create a Connection**.
+
+<p align="center">
+<img width="1621" height="882" alt="image" src="https://github.com/user-attachments/assets/019f99f2-2c67-4615-a75d-d58aefb76db5" />
+</p>
+
+Select **System-Assigned** in the **Authentication** parameter and click **Next**.
+
+<p align="center">
+<img width="1266" height="465" alt="image" src="https://github.com/user-attachments/assets/15ec0f66-306c-4259-813d-a76b3b123ee1" />
+</p>
+
+> NOTE: If you don't already have a managed identity enabled for your Azure Digital Twins instance, you will first see [this page](https://learn.microsoft.com/en-us/azure/digital-twins/how-to-set-up-instance-portal#enabledisable-managed-identity-for-the-instance), asking you to enable Identity for the instance before creating the data history connection. If it is already enabled, continue to the next step.
+
+On the **Send** page, fill in the required fields using the Event Hub resources you created, and click **Next**.
+
+<p align="center">
+<img width="1294" height="789" alt="image" src="https://github.com/user-attachments/assets/db8d740f-d388-4c75-bec2-33f8d275386c" />
+</p>
+
+On the **Store** page, select the desired subscription, choose the cluster you created earlier, and select the database you also created.
+In **Table names**, provide a name in **Property event table name**, as shown in the image below, and enable **Include property removal events** (checkbox selected in the image below).
+Click **Next** to continue.
+
+<p align="center">
+<img width="1278" height="815" alt="image" src="https://github.com/user-attachments/assets/b69888e2-18f1-4c2a-adef-1ddfe8b34a08" />
+</p>
+
+On the **Permission** page, the required roles are shown so that the **Azure Digital Twins** instance can:
+- send data to **Event Hub**
+- connect to **Azure Data Explorer** (cluster and database)
+
+For each block shown, grant these permissions:
+- **Azure Event Hubs Data Owner**
+- **Contributor on the Azure Data Explorer cluster**
+- **Admin on the Azure Data Explorer database**
+  
+In each block, when the confirmation prompt appears to proceed with role assignment, click **Yes**.
+<p align="center">
+<img width="1263" height="809" alt="image" src="https://github.com/user-attachments/assets/9acf5c33-cec7-4f06-8696-dfa5fcb659c4" />
+</p>
+
+> Note: It is normal for **Azure Event Hubs Data Owner** not to appear selected, because equivalent or higher permissions may already have been assigned manually, allowing you to proceed to the next step.
+> <p align="center">
+> <img width="824" height="296" alt="image" src="https://github.com/user-attachments/assets/f176672f-ac28-4d34-8df0-ccd5f4d42771" />
+> </p>
+
+After completing the required assignments, click **Next** to go to **Review + create**.
+
+After you receive confirmation that the connection has been created, click **Open Azure data Explorer** to verify.
+
+<p align="center">
+<img width="876" height="233" alt="image" src="https://github.com/user-attachments/assets/1b751e8b-b9fa-4f01-8696-0a15659d928c" />
+</p>
+
+In Azure Digital Twins:
+Click the Data History button (already enabled) in Azure Digital Twins, where you can view your variable history in chart or table format.
+
+<p align="center">
+<img width="1393" height="741" alt="image" src="https://github.com/user-attachments/assets/a9982849-3fbd-4363-abe6-e947d4f6153d" />
+</p>
+
+<p align="center">
+<img width="929" height="631" alt="image" src="https://github.com/user-attachments/assets/7ab3d1e9-f953-47db-90db-201b07552f80" />
+</p>
+
+<p align="center">
+<img width="932" height="628" alt="image" src="https://github.com/user-attachments/assets/938b8903-e862-49bf-a334-4513581c5a1d" />
+</p>
 
 ---
 

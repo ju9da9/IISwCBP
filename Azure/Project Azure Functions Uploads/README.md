@@ -2,8 +2,9 @@
 
 ## English Version
 
-### Important note
-When uploading a `.cs` file, temporarily move or remove other `.cs` files to avoid deployment/build conflicts.
+Precautions to take:
+
+When uploading a `.cs` file, delete/move the remaining `.cs` files to another folder to avoid conflicts.
 
 ---
 

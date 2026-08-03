@@ -2,17 +2,206 @@
 
 ## English Version
 
-This guide explains how to visualize **AWS IoT SiteWise** data in **Grafana**.
+The goal of this phase is to access AWS IoT SiteWise data from Grafana, a data visualization platform based on dashboards. To do this, you need to create a new data source in Grafana so you can access AWS data.
+To begin, create a Grafana account. For the region, you can choose "EU Germany." Note that when using local Grafana, the user has access to a 12-day unlimited usage trial.
 
-### Main flow
-1. Create a Grafana account and add the **AWS IoT SiteWise** data source.
-2. In AWS IAM, create a user/policy with SiteWise read permissions (`Describe*`, `Get*`, `List*`, and batch property reads).
-3. Generate and save AWS access keys.
-4. Configure keys (and optionally endpoint/region) in Grafana.
-5. Build dashboards and panels from SiteWise assets/properties.
-6. (Optional) Add transformations to support alert rules.
+Click *Get Started*.
+<p align="center">
+<img width="1129" height="629" alt="image" src="https://github.com/user-attachments/assets/e06bc6e2-1364-401b-8767-9bea95a832f2" />
+</p>
+Go to *Connect and Visualize Data*.
+<p align="center">
+<img width="1836" height="730" alt="image" src="https://github.com/user-attachments/assets/19456a47-2ca5-4f44-923e-06b415f314ad" />
+</p>
 
-> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+The next step is to search for the system or service that will be used to make this connection. Search for the "AWS" option and select it.
+<p align="center">
+<img width="1021" height="509" alt="image" src="https://github.com/user-attachments/assets/d6d1ff6a-c403-49e8-b9f0-a789c9858d05" />
+</p>
+Next, select "Visualize your AWS Datasource data," choose "AWS Sitewise," and click "Continue."
+<p align="center">
+<img width="929" height="826" alt="image" src="https://github.com/user-attachments/assets/7f1bdaa7-abce-49cc-b1ea-a1c8a843c7b1" />
+</p>
+
+After following these steps, click *Install*.
+<p align="center">
+<img width="1578" height="553" alt="image" src="https://github.com/user-attachments/assets/947f9786-86a4-49d4-aa71-104102489aea" />
+</p>
+
+In the side bar, open the "Connections" tab and click "Data Sources."
+<p align="center">
+<img width="302" height="666" alt="image" src="https://github.com/user-attachments/assets/cd1a4743-69df-4a11-a458-1f1a3f8ddb24" />
+</p>
+Once on the data sources page, click "Add new data source."
+<p align="center">
+<img width="1575" height="218" alt="image" src="https://github.com/user-attachments/assets/6fe10e5e-e45a-4076-853d-d15e76005ef9" />
+</p>
+
+Search for "AWS IoT SiteWise," and click the *AWS IoT SiteWise* option.
+<p align="center">
+<img width="672" height="147" alt="image" src="https://github.com/user-attachments/assets/4a88ac18-ffe1-441a-93cc-269666d685ef" />
+</p>
+To access AWS IoT SiteWise data, you need an access key along with the service endpoint and region. For this, create an *IAM User* with permissions to:
+  1. Get the current value of asset properties;
+  2. Get the history of property values;
+  3. Get timestamps for asset properties;
+
+To do this, go back to AWS and search for IAM. When you reach the page, go to *Users* and create a new *user*.
+<p align="center">
+<img width="1584" height="274" alt="image" src="https://github.com/user-attachments/assets/9bdd2999-a1c9-4b88-aae0-1b7a12aca63a" />
+</p>
+Enter a *User name* and click *Next*.
+<p align="center">
+<img width="1502" height="457" alt="image" src="https://github.com/user-attachments/assets/1e0aa7ee-9b41-431d-8c2a-63e1f3b11f66" />
+</p>
+Select *Attatch policies directly*, create a new policy in *Create policy*, and enter a name (for example, "GrafanaSiteWiseReadOnly").
+<p align="center">
+<img width="1477" height="298" alt="image" src="https://github.com/user-attachments/assets/1fba5800-9232-42e5-96c0-e909252a091e" />
+</p>
+Enter the following actions as shown in the command below:
+
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Effect": "Allow",
+            "Action": [
+                "iotsitewise:Describe*",
+                "iotsitewise:Get*",
+                "iotsitewise:List*",
+                "iotsitewise:BatchGetAssetPropertyValue",
+                "iotsitewise:BatchGetAssetPropertyValueHistory"
+            ],
+            "Resource": "*"
+        }
+    ]
+}
+
+```
+
+Save the created *policy*.
+
+Go back to the IAM User creation page (in the *policies* section), select the policy you created, and click *Next*.
+<p align="center">
+<img width="1490" height="409" alt="image" src="https://github.com/user-attachments/assets/40244f69-e858-4cd1-9e8e-81d8a4a6cfe5" />
+</p>
+
+At the end, click *Create user*.
+<p align="center">
+<img width="1516" height="694" alt="image" src="https://github.com/user-attachments/assets/0d19b020-0b86-44ee-98e2-ed19bdd368c4" />
+</p>
+
+Still in IAM settings, go to users and open the created user. In the "security credentials" tab, create a new access key.
+<p align="center">
+<img width="1554" height="219" alt="image" src="https://github.com/user-attachments/assets/f0758922-76eb-4112-83a4-03d4ab7d2d59" />
+</p>
+
+Select *Application running outside AWS* and click *Next*. Since the next page is optional, click *Create access Key*.
+<p align="center">
+<img width="1582" height="764" alt="image" src="https://github.com/user-attachments/assets/35428fda-bcc8-43ff-82d7-94ab7a449925" />
+</p>
+
+
+
+As soon as you create a new *access key*, it is important to save both the *access key* and the *secret access key*, because once you click *Done*, you will no longer be able to access this page and will need to create a new key. So download the .CSV file with the keys and store it.
+
+<p align="center">
+<img width="1532" height="690" alt="image" src="https://github.com/user-attachments/assets/346e1227-48a7-443b-b12a-27328652497b" />
+</p>
+
+Once you have the access key, you can return to Grafana to set up communication by entering the keys in the requested fields and clicking *Save*.
+
+Optionally, you can also add the AWS IoT SiteWise service *Endpoint* and region.
+<p align="center">
+<img width="506" height="206" alt="image" src="https://github.com/user-attachments/assets/c6d104e1-341f-4b11-80b0-ee310ad4bedd" />
+</p>
+If this notification appears, it means you are ready to retrieve information from AWS IoT SiteWise and create a dashboard or query data.
+
+<p align="center">
+<img width="790" height="113" alt="image" src="https://github.com/user-attachments/assets/4ff895d3-3590-4569-8339-768fcc4f8a6b" />
+</p>
+If you return to the data sources page, you can see that the data source you created has been added. Click "Build a dashboard" to create a new dashboard.
+<p align="center">
+<img width="1564" height="98" alt="image" src="https://github.com/user-attachments/assets/a51cc33b-63b2-49f9-b929-4142c2c011a1" />
+</p>
+On the new dashboard page, we will add a panel. To do this, click "add visualization"
+<p align="center">
+<img width="960" height="494" alt="image" src="https://github.com/user-attachments/assets/d7cbb13f-a940-4c69-bde1-f82c86fcf378" />
+</p>
+A window will appear to select a data source. Choose the data source you created: "grafana-iot-sitewise-datasource".
+<p align="center">
+<img width="1186" height="687" alt="image" src="https://github.com/user-attachments/assets/23cdd78e-43bb-434a-b3ee-f0b815b6a516" />
+</p>
+
+If you want to view value history in a Time Series format and rename the chart, go to the right side bar under "Visualization" and "Panel options" - Title.
+
+<p align="center">
+<img width="282" height="290" alt="image" src="https://github.com/user-attachments/assets/62e7d8d1-4f63-479d-8ebb-c11821390519" />
+
+dfghgfdsg ADD SOME TEXT HERE!
+<p align="center">
+<img width="379" height="72" alt="image" src="https://github.com/user-attachments/assets/6a1f8c64-3e9e-4c68-9919-b4d2058ddbc6" />
+</p>
+Next, you should select the desired Asset by going to the Asset parameter --> Explore button.
+
+<p align="center">
+<img width="681" height="361" alt="image" src="https://github.com/user-attachments/assets/d26a337e-7ac3-4721-86d5-e60e74ef2c6e" />
+</p>
+asfdfghj
+
+<p align="center">
+<img width="678" height="712" alt="image" src="https://github.com/user-attachments/assets/62d0e48d-9a4d-4b8a-9307-f278f399f2b6" />
+</p>
+
+Then choose which property/variable you want to visualize.
+<p align="center">
+<img width="249" height="206" alt="image" src="https://github.com/user-attachments/assets/6d3a2dcd-88ca-40bc-908a-014b4dc37479" />
+</p>
+
+If you go to "Run Query" / "Run Queries" — depending on the selected period (last 24/12/6/3/1 hour(s) or earlier dates) — you can view the chart you created.
+<p align="center">
+<img width="1613" height="457" alt="image" src="https://github.com/user-attachments/assets/b419cd43-fde1-4073-9eeb-e6a52ee889c1" />
+</p>
+
+If you want to add alerts, you need to use transformations with AWS IoT SiteWise data sources (it is recommended to use this in a panel with a single query), since the data format returned by the query is not compatible with the format accepted by Grafana's alerting engine ("wide series" format, i.e., a single numeric series per query refid). The data sent to Grafana includes three numeric series (timestamp, variable value, and data quality) — ChatGPT reference (find the exact reference or bibliography for this part).
+
+
+
+To do this, save your dashboard changes and, in the lower-left corner of the visualization panel, click "transformations" (see: [Query and transform data | Grafana documentation]( https://grafana.com/docs/grafana/latest/panels-visualizations/query-transform-data/)
+<p align="center">
+<img width="389" height="99" alt="image" src="https://github.com/user-attachments/assets/51b45023-11ef-4b1e-b761-4f9bd182a91f" />
+</p>
+
+
+Click "Add transformation".
+
+<p align="center">
+<img width="719" height="173" alt="image" src="https://github.com/user-attachments/assets/89494420-400c-4a26-9162-6840a2eab0e0" />
+</p>
+
+A window will appear to select the transformation type. Select "Filter fields by name” as the transformation type.
+
+<p align="center">
+<img width="163" height="192" alt="image" src="https://github.com/user-attachments/assets/061f461c-22af-40b7-bf2a-46689fe364c8" />
+</p>
+
+There is a selection area where query properties appear. Keep only the property relevant to the alert (in this case, "Level_Tank"). This removes all other columns returned in the query, leaving only the variable series to monitor.
+
+<p align="center">
+<img width="524" height="145" alt="image" src="https://github.com/user-attachments/assets/628931b3-ea72-41d1-96d2-8d5d26802a2f" />
+</p>
+Save the change, go to the panel where you applied the transformation, and left-click or click <img width="46" height="46" alt="image" src="https://github.com/user-attachments/assets/17830924-df5c-4352-8034-9f489e473173" />, click "more," and then click "New alert rule".
+<p align="center">
+<img width="665" height="347" alt="image" src="https://github.com/user-attachments/assets/98c2fd7c-7f5b-4318-8382-88324a8609c7" />
+</p>
+fghjkljhgfhjk
+
+<p align="center">
+<img width="1095" height="679" alt="image" src="https://github.com/user-attachments/assets/135923e7-84d9-4354-9ca1-6eb4d96355a6" />
+</p>
+
+There are many visualization types in Grafana for building a dashboard. The template for the use case is in the folder [AWS/Backup Dashboard grafana AWS](https://github.com/ju9da9/IISwCBP/tree/main/AWS/Backup%20Dashboard%20grafana%20AWS).
 
 ---
 
