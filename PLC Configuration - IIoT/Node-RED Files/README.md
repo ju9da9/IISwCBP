@@ -1,5 +1,20 @@
 # README
 
+## English Version
+
+This folder contains the **Node-RED** project used to integrate **PLCs** with cloud platforms.
+
+It includes flows and dependencies for:
+- OPC UA communication with industrial PLCs;
+- Data exchange with AWS IoT Core, Azure IoT Hub, and Siemens Insights Hub;
+- Industrial data processing;
+- SCADA dashboard creation for real-time monitoring and control.
+
+> The palette table below is preserved from the Portuguese version.
+
+---
+
+
 Esta pasta contém o projeto desenvolvido em **Node-RED** para a integração de **Programmable Logic Controllers (PLC)** com plataformas Cloud.
 
 O projeto utiliza diferentes palettes do Node-RED para permitir:
@@ -21,4 +36,3 @@ O projeto utiliza diferentes palettes do Node-RED para permitir:
 | **node-red-contrib-azure-iot-hub** | Permite a integração entre Node-RED e o **Microsoft Azure IoT Hub**, possibilitando o envio de dados industriais para a Cloud através de MQTT. |
 | **@mindconnect/node-red-contrib-mindconnect** | Permite comunicação com o **Siemens Insights Hub**, possibilitando o envio de dados de equipamentos industriais para a plataforma Cloud da Siemens através do MindConnect. |
 | **node-red-contrib-batcher** | Permite agrupar e processar mensagens antes do envio para outros sistemas, sendo útil para organizar dados provenientes dos PLCs ou sensores. |
-

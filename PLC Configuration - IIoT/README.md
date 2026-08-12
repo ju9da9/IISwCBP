@@ -1,5 +1,23 @@
 # PLC - IIoT Configuration
 
+## English Version
+
+This folder documents how to configure a **Siemens PLC** and **IIoT Gateway** for **OPC UA** communication with **Node-RED**.
+
+### Main flow
+1. Prepare TIA Portal project and create a Global DB.
+2. Enable and configure the PLC OPC UA Server.
+3. Define server interface variables.
+4. Validate communication in **UA Expert**.
+5. Configure Node-RED OPC UA nodes and data flow for cloud publishing.
+
+A Siemens IOT2050 setup guide is also referenced in this folder.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 Esta pasta é dedicada para a documentação relacionada com a configuração do programa TIA Portal para establecer uma comunicação OPC UA com o IIoT Gateway, ao criar um OPC UA Server no autómato.
 
 É de notar que o programa TIA Portal que está neste repositório está configurado para conectar o S7-1500 com CPU X simulado - para o PLC (S7-1500) físico, no caso de ter apenas o PLC físico utilizado neste trabalho Foi realizado desta maneira devido às condições em que o autor deste repositório, no qual apenas tinha CPU A (físico) disponível, um autómato com menores capacidades que o CPU X que até apenas simulado poderia funcionar mas não com OPC UA, uma vez que a Siemens PLCSIM Advanced v5.0 não suporta a comunicação entre um PLC Simulado e um Dispositivo IIoT Físico - apenas se o Node-RED e o programa simulado estiverem num único PC. **Mas se tiver o CPU simulado neste trabalho em formato hardware, não necessita de utilizar o TRCV_C e o TSEND_C (utilizados no programa TIA Portal deste repositório - removendo-os se achar necessário), fazendo todos os procedimentos de configuração de um OPC UA Server neste PLC.**
@@ -196,7 +214,6 @@ Crie uma função com um modelo de registo de dados em tempo real, onde no qual 
 <img width="572" height="184" alt="image" src="https://github.com/user-attachments/assets/41119d96-39df-4305-85a5-dc8b126e2e61" />
 
 O resto da função dependerá como devem ser enviados os dados em cada cloud. Vá às pastas dedicadas às clouds para ver como são enviados os dados do Node-RED.
-
 
 
 

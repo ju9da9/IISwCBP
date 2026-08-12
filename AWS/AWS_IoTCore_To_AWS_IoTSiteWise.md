@@ -1,5 +1,217 @@
 # AWS IoT Core -> AWS IoT SiteWise
 
+## English Version
+
+AWS IoT SiteWise is a service that allows collecting, storing, organizing, and monitoring data from industrial equipment.
+With this service, it is possible to monitor multiple operations across multiple facilities, create performance metrics and indicators, and run automatic calculations on collected data.
+
+__(Explain how AWS IoT SiteWise Assets and Models work)__
+
+<p align="center">
+<img width="1181" height="445" alt="image" src="https://github.com/user-attachments/assets/945cc6fe-9676-4ba5-b39b-c2e056ea2529" />
+</p>
+Image taken from [What is AWS IoT SiteWise? - AWS IoT SiteWise](https://docs.aws.amazon.com/iot-sitewise/latest/userguide/what-is-sitewise.html#how-sitewise-works)
+
+## 1. Creating Models and Assets
+
+The first step is to create the models for the Assets.
+<p align="center">
+<img width="1618" height="535" alt="image" src="https://github.com/user-attachments/assets/a8d0c3cc-e3ea-409f-81c5-92e502af5cdf" />
+</p>
+
+<p align="center">
+<img width="1359" height="744" alt="image" src="https://github.com/user-attachments/assets/62277c0d-3341-4227-9c8d-24467c781ef6" />
+</p>
+
+> IMPORTANT NOTE: If you want to create notifications and alerts with Grafana, __do not use 'Units'__, as this prevents that from being possible.
+
+In the created case, these were the tables used to create the Models:
+
+
+| Property Name (SiteWise) | Property Alias                                      | Type    |
+|--------------------------|----------------------------------------------------|---------|
+| Count_Distro_1           | /Factory_1/Distribution_System_1/Count_Distro_1    | integer |
+| Count_Distro_2           | /Factory_1/Distribution_System_1/Count_Distro_2    | integer |
+| Count_Distro_3           | /Factory_1/Distribution_System_1/Count_Distro_3    | integer |
+| Count_Distro_4           | /Factory_1/Distribution_System_1/Count_Distro_4    | integer |
+| Count_Distro_5           | /Factory_1/Distribution_System_1/Count_Distro_5    | integer |
+| Count_Distro_6           | /Factory_1/Distribution_System_1/Count_Distro_6    | integer |
+| Count_Distro_Total       | /Factory_1/Distribution_System_1/Count_Distro_Total| integer |
+
+
+
+
+| Property Name (SiteWise)     | Property Alias                                | Type    |
+|------------------------------|-----------------------------------------------|---------|
+| No_Distro_Active             | /Factory_1/No_Distro_Active                  | boolean |
+| No_Machine_Active            | /Factory_1/No_Machine_Active                 | boolean |
+| No_Conditions_toStack        | /Factory_1/No_Conditions_toStack             | boolean |
+
+
+
+| Property Name (SiteWise)     | Property Alias                                   | Type    |
+|------------------------------|-------------------------------------------------|---------|
+| Level_Tank                  | /Factory_1/Machine_1/Level_Tank                 | double  |
+| Valv_Discharge              | /Factory_1/Machine_1/Valv_Discharge             | double |
+| Valv_Filling                | /Factory_1/Machine_1/Valv_Filling               | double |
+| Counter_Part_Machine        | /Factory_1/Machine_1/Counter_Part_Machine       | integer |
+
+> *This table applies to `Machine_2`*
+
+
+| Property Name (SiteWise) | Property Alias                                   | Type   |
+|--------------------------|-------------------------------------------------|--------|
+| vel_CT3                 | /Factory_1/Conveyor_Tracking_1/vel_CT3          | double |
+| vel_CT4                 | /Factory_1/Conveyor_Tracking_1/vel_CT4          | double |
+| vel_CT5                 | /Factory_1/Conveyor_Tracking_1/vel_CT5          | double |
+| vel_CT6                 | /Factory_1/Conveyor_Tracking_1/vel_CT6          | double |
+| vel_CT7                 | /Factory_1/Conveyor_Tracking_1/vel_CT7          | double |
+
+
+Do the same for the machine model and for the distribution system. The same process must be done for the factory model, but in this case hierarchy definitions must be added.
+Go to "Hierarchy Definitions" and add the following hierarchies:
+(Mention what hierarchy definitions are)
+
+<p align="center">
+<img width="1301" height="447" alt="image" src="https://github.com/user-attachments/assets/c8d6be30-53bd-4f10-acf6-b3635af10a2d" />
+</p>
+
+
+The second step is creating assets through the AWS IoT SiteWise side menu and then going to Assets.
+Select the model and name the asset. You must do this in the following quantities:
+
+Machines → 2x
+Distribution_System → 1x
+Conveyor_Tracking → 1x
+Factory → 1x
+
+<p align="center">
+<img width="1122" height="508" alt="image" src="https://github.com/user-attachments/assets/b3998a56-9312-47a3-a094-454b38328fc1" />
+</p>
+
+
+3rd step: Edit the assets to add the "property alias" values.
+A property alias is a text path that AWS IoT Core will use to identify where the data should go.
+
+Each asset property (number, boolean, string) can have a single alias.
+That alias is what you will need to reference in the IoT Rule action.
+
+Go to an asset (for example, "Machine-1") and click "Edit".
+In properties, where properties were created, enter the aliases for the corresponding properties. Save at the end.
+
+<p align="center">
+<img width="1589" height="700" alt="image" src="https://github.com/user-attachments/assets/b859517e-75f4-4fa3-b56a-691439548ac5" />
+</p>
+
+Do the same for the remaining assets.
+
+Once you have all assets created, go to the Factory asset and click "Edit".
+Associate all assets to it in "Add associated asset". The following image shows how it should look at the end.
+
+<p align="center">
+<img width="1327" height="285" alt="image" src="https://github.com/user-attachments/assets/e76a4d92-3a55-43c5-9fbf-2a7823c18bfa" />
+</p>
+
+Click "Save".
+
+<p align="center">
+<img width="284" height="356" alt="image" src="https://github.com/user-attachments/assets/6467d983-2129-44d0-af88-0d2f59eac470" />
+</p>
+
+## 2. Creating Rules
+
+The next step is creating Rules, which allow sending data from topics that enter AWS IoT Core to the target service (in this case AWS SiteWise).
+
+In the AWS IoT menu, go to the "Rules" option.
+
+<p align="center">
+<img width="283" height="533" alt="image" src="https://github.com/user-attachments/assets/d905c5ef-fded-4ca6-9aaa-3bd63f34ee70" />
+</p>
+
+
+
+Click "Create rule", and you will be redirected to a new page. Enter the rule name (for example, "Send_Counter_Topic_To_Sitewise") and a rule description if needed. Then click "Next".
+
+<p align="center">
+<img width="1506" height="598" alt="image" src="https://github.com/user-attachments/assets/079064d5-9f95-4f51-b94d-a4f30439a026" />
+</p>
+
+
+Next, you need to create an SQL Statement inside the rule, which defines which parameters or topic variables should be considered for sending to AWS SiteWise. By using the * character in SQL, applied to the AWS/Counters topic, we are selecting all variables published in that topic. It is important to note that, for the integration to work correctly, the data must be inserted and processed in the same order in which it was defined in the topic payload.
+
+<p align="center">
+<img width="1273" height="702" alt="image" src="https://github.com/user-attachments/assets/b18a0468-43b1-45b7-9b11-9d051462f2b9" />
+</p>
+
+In the next step, the data selected in the rule must be associated with the property alias previously created in AWS IoT SiteWise. For this, we define each Entry that represents the link between a variable received in the IoT Core topic and the corresponding property in the SiteWise asset model.
+It is essential to keep the same order in which variables were structured in the topic, to ensure the correct mapping between received values and configured properties. In the example shown, the property alias /Factory_1/Distribution_System_1/Count_Distro_1 was associated with the field ${Count_Distro_1}, while also specifying the data type (INTEGER) and the timestamp (${timeInSeconds}), allowing SiteWise to store the values with the proper time reference.
+
+<p align="center">
+<img width="1282" height="826" alt="image" src="https://github.com/user-attachments/assets/563bcfcf-6317-4535-a1ae-c7efb6293387" />
+</p>
+
+__(Need to explain IAM Role at the end)__
+__At the end of adding all variables present in the topic, an IAM Role with an associated *policy* must be added. (Write next what it is) an IAM Role is a rule... A policy is..... In this case, an IAM role is needed to allow writing data to asset properties in IoT SiteWise.__
+
+As it is very likely that you do not already have an IAM Role created for this feature, go to the bottom of the page where there is an *IAM Role* section, and click *Create a new role*, where you should enter a new name for the role and click *Create*.
+
+<p align="center">
+<img width="526" height="226" alt="image" src="https://github.com/user-attachments/assets/40442779-c9f2-4223-8083-ccef1fcb16ac" />
+</p>
+
+To grant permission for data to be redirected to IoT SiteWise, the recently created role must be edited. Click "view", where you will be redirected to a new page.
+
+<p align="center">
+<img width="576" height="82" alt="image" src="https://github.com/user-attachments/assets/3c792c9d-8349-4f87-a55e-a1aea1156aa2" />
+</p>
+
+On the page that opens, go to *Permissions policies*, and in "Add permissions", choose *Create inline policy*.
+
+<p align="center">
+<img width="1472" height="284" alt="image" src="https://github.com/user-attachments/assets/1f5ecd36-4057-4e63-a489-0e3580b057ca" />
+</p>
+
+You will be redirected to a page to specify permissions, where you have two ways to add them: either with a JSON statement or with the visual method, where you choose access levels (List, Read, Write, Tagging) and ARN resources (__*All*__ OR __*Specific*__). In this case, only the __"BatchPutAssetPropertyValue"__ action is needed, which "Grants permission to put property values for asset properties". In these cases resources are usually not specific, so in *Resources*, select "All".
+
+<p align="center">
+<img width="987" height="746" alt="image" src="https://github.com/user-attachments/assets/aa972b01-9606-4075-8f97-ff6a20f6c3c6" />
+</p>
+
+
+If you want to do it in JSON format, you can use the following statement:
+
+``` 
+{
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Action": "iotsitewise:BatchPutAssetPropertyValue",
+			"Resource": "*"
+		}
+	]
+}
+```
+
+Click Next.
+
+Enter a name for the policy and click *Create policy*.
+
+<p align="center">
+<img width="1638" height="502" alt="image" src="https://github.com/user-attachments/assets/22b726ee-0921-4baa-acea-7d2a8abd5dfd" />
+</p>
+And now we have the IAM role created.
+
+<p align="center">
+<img width="1597" height="882" alt="image" src="https://github.com/user-attachments/assets/8f9695a1-f0d9-4374-8292-24f89ce2cbd7" />
+</p>
+
+Go back again to the page where you were creating the rule. Use the icon <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> to refresh the roles list and reselect the created role. Then click "Next" and then "Create". Do the same with the remaining topics and you will be able to redirect data from AWS IoT Core to AWS IoT SiteWise.
+
+
+---
+
+
 A AWS IoT SiteWise é um serviço no qual permite a obtenção, o armazenamento, organização e monitorização de dados vindos de equipamentos industriais.
 Com este serviço é possível monitorizar várias operações nas várias instalações, criar métricas e indicadores de desempenho, realizar cálculos automáticos sobre os dados obtidos e
 
@@ -205,4 +417,3 @@ E assim temos a IAM role criada.
 </p>
 
 Volte de novo à página onde estava a criar a rule. Use o ícone <img width="32" height="38" alt="image" src="https://github.com/user-attachments/assets/38c264e1-662e-49a2-a39e-e40ecb06214b" /> para atualizar a lista de roles e volte a inserir a role criada. De seguida Clique em "Next" e depois em "Create". Faça o mesmo com os restantes tópicos e assim poderá redirecionar os dados que estão na AWS IoT Core para a AWS IoT SiteWise.
-

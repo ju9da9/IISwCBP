@@ -1,5 +1,25 @@
 # Siemens Insights Hub
 
+## English Version
+
+This guide explains how to model and onboard data in **Siemens Insights Hub**.
+
+### Recommended order
+1. Create **Aspects**
+2. Create **Types**
+3. Create **Assets**
+4. Perform **Onboarding**
+
+### Concepts
+- **Aspect**: logical group of related datapoints/variables.
+- **Type**: reusable model/template that includes aspects.
+- **Asset**: digital representation of real equipment/machines using a type.
+
+> The detailed step-by-step tutorial with screenshots remains below in Portuguese.
+
+---
+
+
 - dizer o que é
 
 O primeiro passo para começar a criar soluções no Insights Hub é modelar corretamente os seus dados através de Aspects Types e Assets. Após a criação destes, será possível fazer o processo de onboarding, que consiste no
